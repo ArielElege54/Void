@@ -1,0 +1,67 @@
+@import '../Utilities/animation', '../Utilities/mixin', '../Utilities/variables',
+	'./Base/hero', './Base/navbar', './Views/home', '../Utilities/scrollstuff';
+
+body {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	position: relative;
+	@include flexCenter(center, center, column);
+	font-family: sans-serif;
+	background: $bg-colorg;
+	overflow-x: hidden;
+}
+ul {
+	list-style-type: none;
+}
+header {
+	display: flex;
+	@include size(2em, 100%);
+	background-color: rgba(0, 0, 0, 0.07);
+	@include position($pos: fixed, $top: 0, $left: 0);
+	z-index: 1;
+	.site-header {
+		margin: auto auto auto auto;
+		&__text {
+			font-weight: 800;
+			font-size: 1.2rem;
+			text-decoration: none;
+			color: $p-color;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+main {
+	padding-bottom: 2em;
+}
+footer {
+	border-top: 1px solid black;
+	width: 80%;
+	text-align: center;
+
+	section {
+		@include flexCenter(start);
+		width: 100%;
+		div {
+			width: 33.33%;
+			h3 {
+				font-size: 1rem;
+			}
+			@include flexCenter($direction: column);
+			a {
+				color: $p-color;
+				font-size: 0.8rem;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				&:hover {
+					filter: opacity(0.6);
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

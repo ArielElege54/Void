@@ -1,0 +1,29 @@
+@import "../../Utilities/variables";
+
+.hero-content {
+   @include size(35em, 100%);
+   position: relative;
+   background: url("../images/landscape.jpg") fixed;
+   background-size: cover;
+   color: $p-color;
+   margin-bottom: 10vh;
+
+   h1 {
+      @include position($top: 20%, $left: 8%);
+      font-size: 4rem;
+      font-weight: 800;
+   }
+   h2 {
+      @include position($top: 43%, $left: 16%);
+      font-size: 3rem;
+      font-weight: 800;
+   }
+   p {
+      @include position($bottom: 8%, $left: 10%);
+      width: 60vw;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: $s-color;
+      -webkit-text-stroke: 0.039em black;
+   }
+}

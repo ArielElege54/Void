@@ -1,0 +1,126 @@
+@import '../../Utilities/variables';
+
+.bnav-burger {
+	width: 0.9rem;
+	height: 4px;
+	background-color: $p-color;
+	border-radius: 10%;
+	@include position(fixed, $top: 1.5em, $right: 0.5em);
+	cursor: pointer;
+	z-index: 1;
+
+	&:hover {
+		filter: opacity(0.7);
+	}
+	transition: background-color 2s ease;
+}
+.bnav-burger::before {
+	content: '';
+	position: absolute;
+	width: 0.9em;
+	height: inherit;
+	border-radius: 10%;
+	background-color: $p-color;
+	top: -0.28em;
+}
+.bnav-burger::after {
+	content: '';
+	position: absolute;
+	width: 0.8em;
+	height: inherit;
+	border-radius: 10%;
+	background-color: $p-color;
+	top: 0.25em;
+}
+
+.bnav-burger-open {
+	z-index: 2;
+	visibility: hidden;
+}
+.bnav-burger-open::after {
+	visibility: visible;
+	content: '';
+	@include position($top: 0.01em, $left: -0.1em);
+	@include size(4px, 25px);
+	background-color: $s-color;
+	border-radius: 10%;
+	transform: rotate(40deg);
+	@include animations(spiny, 1.2s, linear);
+}
+.bnav-burger-open::before {
+	visibility: visible;
+	content: '';
+	@include position($top: 0.01em, $left: -0.1em);
+	@include size(4px, 25px);
+	background-color: $s-color;
+	border-radius: 10%;
+	transform: rotate(-40deg);
+	@include animations(spinyslow, 1.2s, ease);
+}
+
+.bnav {
+	visibility: hidden;
+	position: absolute;
+}
+
+.bnav-open {
+	visibility: visible;
+	@include position($pos: fixed, $top: 0, $right: 0);
+	z-index: 1;
+	min-height: 17em;
+	min-width: 10em;
+	background: linear-gradient(
+		to bottom right,
+		rgba(25, 25, 78, 0.23),
+		rgb(25, 25, 78),
+		rgba(25, 25, 78, 0.91)
+	);
+	border-bottom-left-radius: 40px;
+	@include animations(slidein, 1s, ease);
+
+	&__list {
+		@include position($top: -18px, $left: -34px);
+		min-height: 17em;
+		min-width: 10em;
+		@include flexCenter($direction: column);
+		&-items {
+			min-height: 1.1em;
+			min-width: 2.5em;
+			margin: 0.7em;
+			transition: all 0.5s ease;
+
+			&:hover {
+				transform: scale(0.94);
+				opacity: 0.4;
+			}
+
+			.bnav-open-links {
+				color: $s-color;
+				text-decoration: none;
+				font-weight: 700;
+				border-bottom: 2px dashed $s-color;
+			}
+		}
+	}
+}
+
+@for $tings from 1 through 4 {
+	.bnav-open__list:nth-child(#{$tings}) {
+		content: '$tings == #{$tings}';
+		@include animations(slidein, 1s, ease, $delay: $tings * 0.5);
+	}
+}
+
+.burger-wrapper {
+	@include position(fixed, $top: 1.11em, $right: 0.3em);
+	width: 1.3em;
+	height: 1em;
+	border-radius: 15%;
+	outline: 2px solid rgba(255, 232, 203, 0.8);
+	z-index: 1;
+	cursor: pointer;
+}
+
+.active {
+	filter: opacity(0.7);
+}

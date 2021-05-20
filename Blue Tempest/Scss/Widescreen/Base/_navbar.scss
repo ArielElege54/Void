@@ -1,0 +1,33 @@
+@import "../../Utilities/variables";
+
+.bnav {
+   width: 60vw;
+   position: relative;
+
+   &__list {
+      @include flexCenter(center, center);
+      min-width: 20em;
+      &-items {
+         width: 100%;
+         margin: 0.4em 0.6em;
+         .bnav-links {
+            color: white;
+            text-decoration: none;
+            background: $p-color;
+            padding: 0.5em 1.1em 0.5em 1.1em;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: all 0.5s ease-out;
+            &:hover {
+               background-color: rgb(230, 0, 230);
+               border-radius: 0;
+               color: black;
+            }
+         }
+      }
+   }
+}
+
+.active {
+   border: 2px dashed $bg-color;
+}

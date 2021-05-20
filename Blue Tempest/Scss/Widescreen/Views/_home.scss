@@ -1,0 +1,140 @@
+@import '../../Utilities/variables';
+
+.bhome {
+	width: 80%;
+	@include flexCenter(center, center, column);
+	.author {
+		display: grid;
+		width: 100%;
+		grid-template-columns: auto auto;
+		grid-template-rows: 3em 9em;
+		justify-content: center;
+		grid-gap: 0.9em;
+		&-img {
+			visibility: hidden;
+			height: 10rem;
+			width: 10rem;
+			border-radius: 50%;
+			box-shadow: 0.25em 0.25em 1em 0.1em rgba(0, 0, 0, 0.9);
+			grid-column: 1 / 2;
+			grid-row: 1 / 3;
+		}
+		&-name,
+		&-text {
+			visibility: hidden;
+			color: $p-color;
+			grid-column: 2 / 3;
+		}
+		&-text {
+			font-size: 1.1rem;
+			width: 50ch;
+			a {
+				color: inherit;
+				font-style: italic;
+				font-weight: 800;
+				.button {
+					padding: 0.5em;
+					border-radius: 15% /50%;
+					background-color: $s-color;
+					color: black;
+					font-size: 0.8rem;
+					transition: all 0.5s ease;
+					&:hover {
+						background-color: transparent;
+						border: 3px solid white;
+					}
+				}
+				&:hover {
+					filter: opacity(0.7);
+				}
+			}
+		}
+		&-name {
+			position: relative;
+			font-size: 2rem;
+			font-weight: 800;
+			grid-row: 1 / 2;
+			margin-left: 2em;
+		}
+		&-name::after {
+			content: 'BLUE TEMPEST';
+			@include position($top: 0.105em, $left: 0.11em);
+			border-radius: 30px;
+			filter: blur(2.5px);
+		}
+	}
+	.story {
+		width: 100%;
+
+		&-header {
+			width: 100%;
+			text-align: center;
+			font-size: 1.5rem;
+			margin-bottom: 3em;
+		}
+		&-stories {
+			visibility: hidden;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+			place-items: center;
+			cursor: pointer;
+			.stories {
+				margin: 0.1em;
+				@include flexCenter($direction: column);
+				background: linear-gradient(
+					to bottom right,
+					rgb(197, 197, 197) 30%,
+					rgb(255, 255, 255)
+				);
+				border-radius: 1em;
+				transition: all 0.5s ease;
+				&:hover {
+					background: linear-gradient(
+						to bottom right,
+						rgb(129, 129, 129) 30%,
+						rgb(209, 209, 209)
+					);
+					transform: scale(1.04);
+				}
+				&-img {
+					@include size(8em, 100%);
+					border-radius: 1em 1em 0 0;
+				}
+				&-header {
+					@include size(auto, 100%);
+					font-size: 1rem;
+					padding: 0.3em 0em;
+					margin: 0.1em 0em;
+					text-align: center;
+					border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);
+				}
+				&-text {
+					@include size(auto, 100%);
+					margin: 0;
+					text-align: center;
+					padding: 0.3em 0em;
+				}
+			}
+		}
+	}
+}
+
+.sone {
+	transform: translateY(-1.5em);
+}
+.stwo {
+	transform: translateY(1.5em);
+}
+.sthree {
+	transform: translateY(-1.5em);
+}
+.sfour {
+	transform: translateY(1.5em);
+}
+.sfive {
+	transform: translateY(-1.5em);
+}
+.ssix {
+	transform: translateY(1.5em);
+}

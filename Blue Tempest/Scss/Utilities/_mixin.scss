@@ -1,0 +1,45 @@
+@mixin flexCenter($align: center, $justify: center, $direction: row) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+}
+
+@mixin animations($name, $duration, $timingFunc: ease, $delay: none) {
+	animation-name: $name;
+	animation-duration: $duration;
+	animation-timing-function: $timingFunc;
+	animation-delay: $delay;
+}
+
+@mixin position(
+	$pos: absolute,
+	$top: none,
+	$right: none,
+	$bottom: none,
+	$left: none
+) {
+	position: $pos;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin size($height: none, $width: fit-content) {
+	min-height: $height;
+	width: $width;
+}
+
+@mixin slideFade($name, $xOne) {
+	@keyframes #{$name} {
+		0% {
+			transform: translateX($xOne);
+			opacity: 0;
+		}
+		100% {
+			transform: translate(0em);
+			opacity: 1;
+		}
+	}
+}
