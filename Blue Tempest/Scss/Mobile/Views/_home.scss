@@ -1,7 +1,7 @@
 @import '../../Utilities/variables';
 
 .bhome {
-	width: 80%;
+	width: 100%;
 	@include flexCenter(center, center, column);
 	.author {
 		@include flexCenter(center, center, column);

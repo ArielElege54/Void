@@ -1,29 +1,36 @@
-@import "../../Utilities/variables";
+@import '../../Utilities/variables';
 
 .hero-content {
-   @include size(35em, 100%);
-   position: relative;
-   background: url("../images/landscape.jpg") fixed;
-   background-size: cover;
-   color: $p-color;
-   margin-bottom: 10vh;
+	@include size(35em, 100%);
+	position: relative;
+	background: url('../images/barn.jpg') fixed;
+	background-size: cover;
+	color: $s-color;
+	color: rgb(255, 255, 255);
+	@include flexCenter($direction: column);
+	margin-bottom: 10vh;
+	text-align: center;
 
-   h1 {
-      @include position($top: 20%, $left: 8%);
-      font-size: 4rem;
-      font-weight: 800;
-   }
-   h2 {
-      @include position($top: 43%, $left: 16%);
-      font-size: 3rem;
-      font-weight: 800;
-   }
-   p {
-      @include position($bottom: 8%, $left: 10%);
-      width: 60vw;
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: $s-color;
-      -webkit-text-stroke: 0.039em black;
-   }
+	h1 {
+		filter: drop-shadow(1px 1px 7px black);
+		font-size: 4rem;
+		margin: 0 2rem;
+		margin-bottom: 3rem;
+	}
+	h2 {
+		filter: drop-shadow(1px 1px 4px black);
+		font-size: 3rem;
+		margin: 0 2rem;
+		margin-bottom: 4rem;
+	}
+	p {
+		background-color: rgba(44, 44, 255, 0.6);
+		color: black;
+		padding: 0.7rem 1rem;
+		backdrop-filter: blur(4px);
+		border-radius: 1rem 3rem 0 2.5rem;
+		max-width: 40ch;
+		font-size: 1.8rem;
+		margin: 0 2rem;
+	}
 }

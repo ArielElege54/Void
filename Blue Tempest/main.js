@@ -1,9 +1,8 @@
 let burger = document.getElementsByClassName("bnav-burger")[0],
-     burgerW = document.getElementsByClassName("burger-wrapper")[0],
      nav = document.getElementsByClassName("bnav")[0],
      navList = document.getElementsByClassName("bnav__list")[0],
-     navListItems = document.getElementsByClassName("bnav__list-items"),
-     navLinks = document.getElementsByClassName("bnav-links"),
+     navListItems = document.querySelectorAll(".bnav__list-items"),
+     navLinks = document.querySelectorAll(".bnav-links"),
      activeLink = document.getElementsByClassName("active")[0],
      clicked = false;
 
@@ -21,7 +20,6 @@ let body = document.body,
  );
 
 burger.addEventListener("click", toggleNav);
-burgerW.addEventListener("click", toggleNav);
 window.addEventListener("scroll", headerColorShifter);
 
 function toggleNav () {
@@ -30,10 +28,10 @@ function toggleNav () {
           nav.classList.add("bnav-open");
           navList.classList.add("bnav-open__list");
 
-          Array.from(navListItems).forEach(element => {
+          Array.from(navListItems).map(element => {
                element.classList.add("bnav-open__list-items");
           });
-          Array.from(navLinks).forEach(element => {
+          Array.from(navLinks).map(element => {
                element.classList.add("bnav-open-links");
           });
 
@@ -44,11 +42,11 @@ function toggleNav () {
           nav.classList.remove("bnav-open");
           navList.classList.remove("bnav-open__list");
 
-          Array.from(navListItems).forEach(element => {
+          Array.from(navListItems).map(element => {
                element.classList.remove("bnav-open__list-items");
 
           });
-          Array.from(navLinks).forEach(element => {
+          Array.from(navLinks).map(element => {
                element.classList.remove("bnav-open-links");
           });
           
@@ -56,13 +54,9 @@ function toggleNav () {
 
      }
 }
-function headerColorShifter (event) {
+function headerColorShifter () {
      scrollPosition = body.scrollTop || docElem.scrollTop;
-          if (scrollPosition > 40) {
-          header.classList.add("darker")
-          sHeader.style.color = "rgb(255, 232, 203)"
-          } else {
-               header.classList.remove("darker")
-               sHeader.style.color = null
-          }
+          scrollPosition > 40 ?
+               header.classList.add("darker"):
+                    header.classList.remove("darker")
 }

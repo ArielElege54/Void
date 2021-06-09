@@ -9,7 +9,6 @@ body {
 	position: relative;
 	@include flexCenter(center, center, column);
 	font-family: sans-serif;
-	background: $bg-colorg;
 }
 ul {
 	list-style-type: none;

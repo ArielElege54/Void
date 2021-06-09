@@ -286,7 +286,7 @@
   right: none;
   bottom: none;
   left: -0.1em;
-  min-height: 4px;
+  height: 4px;
   width: 25px;
   background-color: #ffe8cb;
   border-radius: 10%;
@@ -310,7 +310,7 @@
   right: none;
   bottom: none;
   left: -0.1em;
-  min-height: 4px;
+  height: 4px;
   width: 25px;
   background-color: #ffe8cb;
   border-radius: 10%;
@@ -466,9 +466,7 @@
 }
 
 .darker {
-  background-color: rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .bhome .author .imgAni {
@@ -552,7 +550,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 2em;
+  height: 2em;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   position: fixed;

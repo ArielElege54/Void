@@ -1,55 +1,36 @@
 @import '../../Utilities/variables';
 
 .hero-content {
-	@include size(30em, 100%);
+	@include size(35em, 100%);
 	position: relative;
-	background: url('../images/landscape.jpg') center center fixed;
+	background: url('../images/barn.jpg') fixed;
 	background-size: cover;
-	color: $p-color;
-	margin-bottom: 2em;
-	@media (max-width: $mobile-w) {
-		clip-path: circle(30em at 35% 0%);
-		@include flexCenter($direction: column);
-	}
+	color: $s-color;
+	color: rgb(255, 255, 255);
+	@include flexCenter($direction: column);
+	margin-bottom: 10vh;
+	text-align: center;
 
 	h1 {
-		@include position($top: 16%, $left: 6%);
-		font-size: 3.6rem;
-		font-weight: 800;
-
-		@media (max-width: $mobile-w) {
-			position: static;
-			font-size: 2.3rem;
-			margin: auto;
-			width: 80%;
-		}
+		filter: drop-shadow(1px 1px 7px black);
+		font-size: 3rem;
+		margin: 0 2rem;
+		margin-bottom: 3rem;
 	}
 	h2 {
-		@include position($top: 38%, $left: 10%);
-		font-size: 2.15rem;
-		font-weight: 800;
-		@media (max-width: $mobile-w) {
-			position: static;
-			font-size: 1.99rem;
-			width: 7em;
-			margin: auto;
-			text-align: center;
-			padding: 0.8rem;
-		}
+		filter: drop-shadow(1px 1px 4px black);
+		font-size: 2.5rem;
+		margin: 0 2rem;
+		margin-bottom: 4rem;
 	}
 	p {
-		@include position($bottom: 11%, $left: 11%);
-		width: 26ch;
-		font-size: 1.45rem;
-		font-weight: 800;
-		color: $s-color;
-		-webkit-text-stroke: 0.039em black;
-		@media (max-width: $mobile-w) {
-			position: static;
-			font-size: 1.39rem;
-			width: 11em;
-			margin: auto;
-			text-align: center;
-		}
+		background-color: rgba(44, 44, 255, 0.6);
+		padding: 0.7rem 1rem;
+		backdrop-filter: blur(4px);
+		border-radius: 1rem 3rem 0 2.5rem;
+		max-width: 40ch;
+		color: black;
+		font-size: 1.4rem;
+		margin: 0 2rem;
 	}
 }

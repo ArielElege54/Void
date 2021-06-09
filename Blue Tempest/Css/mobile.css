@@ -233,96 +233,56 @@
 }
 
 .hero-content {
-  min-height: 30em;
+  height: 35em;
   width: 100%;
   position: relative;
-  background: url("../images/landscape.jpg") center center fixed;
+  background: url("../images/barn.jpg") fixed;
   background-size: cover;
-  color: #19194e;
-  margin-bottom: 2em;
-}
-
-@media (max-width: 30em) {
-  .hero-content {
-    -webkit-clip-path: circle(30em at 35% 0%);
-            clip-path: circle(30em at 35% 0%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+  color: #ffe8cb;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10vh;
+  text-align: center;
 }
 
 .hero-content h1 {
-  position: absolute;
-  top: 16%;
-  right: none;
-  bottom: none;
-  left: 6%;
-  font-size: 3.6rem;
-  font-weight: 800;
-}
-
-@media (max-width: 30em) {
-  .hero-content h1 {
-    position: static;
-    font-size: 2.3rem;
-    margin: auto;
-    width: 80%;
-  }
+  -webkit-filter: drop-shadow(1px 1px 7px black);
+          filter: drop-shadow(1px 1px 7px black);
+  font-size: 3rem;
+  margin: 0 2rem;
+  margin-bottom: 3rem;
 }
 
 .hero-content h2 {
-  position: absolute;
-  top: 38%;
-  right: none;
-  bottom: none;
-  left: 10%;
-  font-size: 2.15rem;
-  font-weight: 800;
-}
-
-@media (max-width: 30em) {
-  .hero-content h2 {
-    position: static;
-    font-size: 1.99rem;
-    width: 7em;
-    margin: auto;
-    text-align: center;
-    padding: 0.8rem;
-  }
+  -webkit-filter: drop-shadow(1px 1px 4px black);
+          filter: drop-shadow(1px 1px 4px black);
+  font-size: 2.5rem;
+  margin: 0 2rem;
+  margin-bottom: 4rem;
 }
 
 .hero-content p {
-  position: absolute;
-  top: none;
-  right: none;
-  bottom: 11%;
-  left: 11%;
-  width: 26ch;
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: #ffe8cb;
-  -webkit-text-stroke: 0.039em black;
-}
-
-@media (max-width: 30em) {
-  .hero-content p {
-    position: static;
-    font-size: 1.39rem;
-    width: 11em;
-    margin: auto;
-    text-align: center;
-  }
+  background-color: rgba(44, 44, 255, 0.6);
+  padding: 0.7rem 1rem;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 1rem 3rem 0 2.5rem;
+  max-width: 40ch;
+  color: black;
+  font-size: 1.4rem;
+  margin: 0 2rem;
 }
 
 .bnav-burger {
@@ -379,7 +339,7 @@
   right: none;
   bottom: none;
   left: -0.1em;
-  min-height: 4px;
+  height: 4px;
   width: 25px;
   background-color: #ffe8cb;
   border-radius: 10%;
@@ -403,7 +363,7 @@
   right: none;
   bottom: none;
   left: -0.1em;
-  min-height: 4px;
+  height: 4px;
   width: 25px;
   background-color: #ffe8cb;
   border-radius: 10%;
@@ -559,7 +519,7 @@
 }
 
 .bhome {
-  width: 80%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -712,13 +672,13 @@
 }
 
 .bhome .story-stories .stories-img {
-  min-height: 8em;
+  height: 8em;
   width: 100%;
   border-radius: 1em 0 0;
 }
 
 .bhome .story-stories .stories-header {
-  min-height: auto;
+  height: auto;
   width: 100%;
   font-size: 1rem;
   padding: 0.3em 0em;
@@ -728,7 +688,7 @@
 }
 
 .bhome .story-stories .stories-text {
-  min-height: auto;
+  height: auto;
   width: 100%;
   margin: 0;
   text-align: center;
@@ -794,9 +754,7 @@
 }
 
 .darker {
-  background-color: rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .bhome .author .imgAni {
@@ -868,8 +826,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: sans-serif;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(150, 150, 150, 0.2)), color-stop(rgba(150, 150, 150, 0.7)), to(rgba(150, 150, 150, 0.5)));
-  background: linear-gradient(to right, rgba(150, 150, 150, 0.2), rgba(150, 150, 150, 0.7), rgba(150, 150, 150, 0.5));
 }
 
 ul {
@@ -880,7 +836,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 2em;
+  height: 2em;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   position: fixed;

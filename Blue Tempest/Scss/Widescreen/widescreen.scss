@@ -1,6 +1,11 @@
 @import '../Utilities/animation', '../Utilities/mixin', '../Utilities/variables',
 	'./Base/hero', './Base/navbar', './Views/home', '../Utilities/scrollstuff';
 
+* {
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	box-sizing: border-box;
 	padding: 0;
@@ -9,30 +14,10 @@ body {
 	position: relative;
 	@include flexCenter(center, center, column);
 	font-family: sans-serif;
-	background: $bg-colorg;
 	overflow-x: hidden;
 }
 ul {
 	list-style-type: none;
-}
-header {
-	display: flex;
-	@include size(2em, 100%);
-	background-color: rgba(0, 0, 0, 0.07);
-	@include position($pos: fixed, $top: 0, $left: 0);
-	z-index: 1;
-	.site-header {
-		margin: auto auto auto auto;
-		&__text {
-			font-weight: 800;
-			font-size: 1.2rem;
-			text-decoration: none;
-			color: $p-color;
-			&:hover {
-				opacity: 0.8;
-			}
-		}
-	}
 }
 
 main {

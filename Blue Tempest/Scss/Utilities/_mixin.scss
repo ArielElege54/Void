@@ -27,7 +27,7 @@
 }
 
 @mixin size($height: none, $width: fit-content) {
-	min-height: $height;
+	height: $height;
 	width: $width;
 }
 
