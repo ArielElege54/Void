@@ -1,0 +1,148 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: rgb(63, 63, 63);
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: sans-serif;
+	overflow-x: hidden;
+	color: white;
+}
+ul {
+	list-style-type: none;
+}
+
+main {
+	padding-bottom: 2em;
+}
+
+.hero-content {
+	height: 35em;
+	width: 100%;
+	background: url('../../dist/images/fire.jpg') fixed;
+	background-size: cover;
+	color: rgb(255, 255, 255);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 10vh;
+	text-align: center;
+}
+.hero-content div {
+	width: 100%;
+}
+.hero-content h1 {
+	filter: drop-shadow(1px 1px 7px black);
+	font-size: 4rem;
+	margin: 0 2rem;
+	margin-bottom: 3rem;
+}
+.hero-content h2 {
+	width: fit-content;
+	filter: drop-shadow(1px 1px 4px black);
+	font-size: 3rem;
+	margin: 0 2rem;
+	margin-bottom: 4rem;
+}
+.hero-content p {
+	background-color: rgba(119, 119, 119, 0.7);
+	filter: brightness(200%);
+	color: black;
+	padding: 0.7rem 1rem;
+	backdrop-filter: blur(4px);
+	border-radius: 1rem 3rem 0 2.5rem;
+	max-width: 40ch;
+	font-size: 1.8rem;
+	margin: 0 2rem;
+}
+.bhome {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.author {
+	width: 80%;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.author-img {
+	float: left;
+	height: 10rem;
+	width: 10rem;
+	border-radius: 50%;
+	box-shadow: 0.25em 0.25em 0.7em 0.1em rgba(0, 0, 0, 0.9);
+	margin-right: 2rem;
+	shape-outside: circle(5rem at 6rem 5rem);
+}
+.author-name {
+	color: rgb(136, 136, 255);
+	font-size: 2rem;
+}
+.author-text {
+	margin-top: 0.3rem;
+	font-size: 1.2rem;
+	max-width: 65ch;
+}
+.author-text button {
+	border-radius: 0.2rem;
+	cursor: pointer;
+	padding: 0.3rem 0.6rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: white;
+	background-color: transparent;
+	transition: filter 0.5s;
+}
+.author-text button:hover {
+	filter: invert(100%);
+}
+
+img {
+	width: 3rem;
+}
+@media screen and (max-width: 30em) {
+	.hero-content h1 {
+		font-size: 3rem;
+	}
+	.hero-content h2 {
+		font-size: 2.5rem;
+	}
+	.hero-content p {
+		font-size: 1.4rem;
+	}
+}
+
+@keyframes slidein {
+	0% {
+		transform: translateX(100%);
+		filter: opacity(0);
+	}
+	100% {
+		transform: translateX(0%);
+		filter: opacity(1);
+	}
+}
+@keyframes slidedown {
+	0% {
+		transform: translateY(-2rem);
+		filter: opacity(0);
+	}
+	100% {
+		transform: translateY(0rem);
+		filter: opacity(1);
+	}
+}

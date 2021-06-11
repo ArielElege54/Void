@@ -1,0 +1,127 @@
+header {
+	height: 2.5em;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	z-index: 1;
+	backdrop-filter: blur(4px);
+}
+.site-header {
+	text-align: center;
+}
+.site-header__text {
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: rgb(123, 143, 255);
+}
+.site-header__text:hover {
+	opacity: 0.8;
+}
+
+header .join {
+	color: white;
+}
+.bnav-burger {
+	display: none;
+}
+.bnav {
+	width: 60%;
+	position: relative;
+}
+.bnav__list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bnav-links {
+	margin: 0.4em 0.5em;
+	color: white;
+	text-decoration: none;
+	font-size: 0.85rem;
+	transition: opacity 0.5s ease-out;
+}
+.bnav-links:hover {
+	opacity: 0.7;
+}
+
+.join-link {
+	display: none;
+}
+.bnav__list-items .active {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 30em) {
+	header {
+		background: black;
+		position: static;
+		height: 3.8em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.site-header__text {
+		color: white;
+	}
+
+	.join {
+		display: none;
+	}
+	.bnav-burger {
+		display: initial;
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		z-index: 1;
+		background-color: black;
+		border-radius: 0.2rem;
+		color: white;
+		padding: 0.4rem;
+		cursor: pointer;
+		transition: filter 0.5s;
+		font-size: 0.9rem;
+	}
+	.bnav-burger:hover {
+		filter: invert(100%);
+	}
+	.bnav {
+		position: fixed;
+		top: 0;
+		right: 0;
+		transform: translateX(100%);
+	}
+	.bnav__list {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background: rgba(0, 0, 0, 0.95);
+		backdrop-filter: blur(4px);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
+		padding: 5rem;
+		padding-top: 0rem;
+	}
+	.bnav__list-items {
+		margin: 10% 0;
+	}
+
+	.bnav-links {
+		font-size: 1.5rem;
+	}
+	.bnav-open {
+		animation: slidein 0.2s;
+		transform: translateX(0%);
+	}
+	.bnav-burger-open {
+		background-color: white;
+		color: black;
+	}
+}
