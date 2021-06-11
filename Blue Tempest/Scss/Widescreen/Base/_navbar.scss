@@ -3,24 +3,28 @@
 header {
 	display: flex;
 	@include size(2.5em, 100%);
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 1);
 	@include position($pos: fixed, $top: 0, $left: 0);
 	@include flexCenter(center, space-around);
 	z-index: 1;
 	.site-header {
-		width: 20%;
 		text-align: center;
 		&__text {
 			font-size: 1.2rem;
 			text-decoration: none;
-			color: rgb(193, 202, 255);
+			color: rgb(123, 143, 255);
 			&:hover {
 				opacity: 0.8;
 			}
 		}
 	}
 }
-
+header .join {
+	color: white;
+}
+.bnav-burger {
+	display: none;
+}
 .bnav {
 	width: 60%;
 	position: relative;
@@ -28,8 +32,8 @@ header {
 	&__list {
 		@include flexCenter(center, center);
 		&-items {
-			margin: 0.4em 0.5em;
 			.bnav-links {
+				margin: 0.4em 0.5em;
 				color: white;
 				text-decoration: none;
 				font-size: 0.85rem;
@@ -43,6 +47,9 @@ header {
 	}
 }
 
-.active {
-	border: 2px dashed $bg-color;
+.join-link {
+	display: none;
+}
+.bnav__list-items .active {
+	text-decoration: underline;
 }

@@ -13,26 +13,7 @@ body {
 ul {
 	list-style-type: none;
 }
-header {
-	display: flex;
-	@include size(2em, 100%);
-	background-color: rgba(0, 0, 0, 0.1);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	.site-header {
-		margin: auto auto auto auto;
-		&__text {
-			font-size: 1.2rem;
-			text-decoration: none;
-			color: $p-color;
-			&:hover {
-				opacity: 0.8;
-			}
-		}
-	}
-}
+
 main {
 	padding-bottom: 4em;
 }

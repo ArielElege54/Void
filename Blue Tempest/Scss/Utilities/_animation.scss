@@ -50,6 +50,16 @@
 		filter: opacity(1);
 	}
 }
+@keyframes slidedown {
+	0% {
+		transform: translateY(-2rem);
+		filter: opacity(0);
+	}
+	100% {
+		transform: translateY(0rem);
+		filter: opacity(1);
+	}
+}
 
 @include slideFade(aboutImg, -2em);
 @include slideFade(aboutName, 2em);
