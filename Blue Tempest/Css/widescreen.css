@@ -340,6 +340,8 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   z-index: 1;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 header .site-header {
@@ -390,13 +392,12 @@ header .join {
   color: white;
   text-decoration: none;
   font-size: 0.85rem;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 .bnav__list-items .bnav-links:hover {
-  border-radius: 0;
-  color: black;
+  opacity: 0.7;
 }
 
 .join-link {
@@ -424,21 +425,7 @@ header .join {
           flex-direction: column;
 }
 
-.bhome .author {
-  display: -ms-grid;
-  display: grid;
-  width: 100%;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -ms-grid-rows: 3em 9em;
-      grid-template-rows: 3em 9em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  grid-gap: 0.9em;
-}
-
-.bhome .author-img {
+.author-img {
   visibility: hidden;
   height: 10rem;
   width: 10rem;
@@ -453,140 +440,8 @@ header .join {
   grid-row: 1 / 3;
 }
 
-.bhome .author-name, .bhome .author-text {
-  visibility: hidden;
-  color: #19194e;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-}
-
-.bhome .author-text {
-  font-size: 1.1rem;
-  width: 50ch;
-}
-
-.bhome .author-text a {
-  color: inherit;
-  font-style: italic;
-  font-weight: 800;
-}
-
-.bhome .author-text a .button {
-  padding: 0.5em;
-  border-radius: 15% /50%;
-  background-color: #ffe8cb;
-  color: black;
-  font-size: 0.8rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.bhome .author-text a .button:hover {
-  background-color: transparent;
-  border: 3px solid white;
-}
-
-.bhome .author-text a:hover {
-  -webkit-filter: opacity(0.7);
-          filter: opacity(0.7);
-}
-
-.bhome .author-name {
-  position: relative;
-  font-size: 2rem;
-  font-weight: 800;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
-  margin-left: 2em;
-}
-
-.bhome .author-name::after {
-  content: 'BLUE TEMPEST';
-  position: absolute;
-  top: 0.105em;
-  right: none;
-  bottom: none;
-  left: 0.11em;
-  border-radius: 30px;
-  -webkit-filter: blur(2.5px);
-          filter: blur(2.5px);
-}
-
-.bhome .story {
-  width: 100%;
-}
-
-.bhome .story-header {
-  width: 100%;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 3em;
-}
-
-.bhome .story-stories {
-  visibility: hidden;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  place-items: center;
-  cursor: pointer;
-}
-
-.bhome .story-stories .stories {
-  margin: 0.1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(30%, #c5c5c5), to(white));
-  background: linear-gradient(to bottom right, #c5c5c5 30%, white);
-  border-radius: 1em;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.bhome .story-stories .stories:hover {
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(30%, #818181), to(#d1d1d1));
-  background: linear-gradient(to bottom right, #818181 30%, #d1d1d1);
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
-}
-
-.bhome .story-stories .stories-img {
-  height: 8em;
-  width: 100%;
-  border-radius: 1em 1em 0 0;
-}
-
-.bhome .story-stories .stories-header {
-  height: auto;
-  width: 100%;
-  font-size: 1rem;
-  padding: 0.3em 0em;
-  margin: 0.1em 0em;
-  text-align: center;
-  border-bottom: 0.1em solid rgba(0, 0, 0, 0.2);
-}
-
-.bhome .story-stories .stories-text {
-  height: auto;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  padding: 0.3em 0em;
+img {
+  width: 3rem;
 }
 
 .sone {

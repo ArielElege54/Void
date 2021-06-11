@@ -285,6 +285,8 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   z-index: 1;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 header .site-header {
@@ -335,13 +337,12 @@ header .join {
   color: white;
   text-decoration: none;
   font-size: 0.85rem;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 .bnav__list-items .bnav-links:hover {
-  border-radius: 0;
-  color: black;
+  opacity: 0.7;
 }
 
 .join-link {

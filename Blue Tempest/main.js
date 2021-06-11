@@ -20,7 +20,7 @@ let docHeight = Math.max(
 
 
 let toggleNav = (event) => {
-	event.preventDefault
+	event.preventDefault()
 	nav.classList.contains('bnav-open') ?
 		burger.innerHTML = 'Menu':
 			burger.innerHTML = 'X'
