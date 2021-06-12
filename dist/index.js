@@ -2,7 +2,7 @@
  let aImg = document.getElementsByClassName("author-img")[0],
      aName = document.getElementsByClassName("author-name")[0],
      aText = document.getElementsByClassName("author-text")[0],
-     stories = document.getElementsByClassName("story-stories")[0];
+     stories = document.getElementsByClassName("stories-container")[0];
 
 // event listeners
 window.addEventListener("scroll", aboutAnimation);

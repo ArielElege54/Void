@@ -23,16 +23,16 @@ let toggleNav = (event) => {
 	event.preventDefault()
 	nav.classList.contains('bnav-open') ?
 		burger.innerHTML = 'Menu':
-			burger.innerHTML = 'X'
+			burger.innerText = 'X'
 	burger.classList.toggle("bnav-burger-open");
 	nav.classList.toggle("bnav-open");
 }
 
 let headerColorShifter = () => {
 	scrollPosition = body.scrollTop || docElem.scrollTop;
-		scrollPosition > 40 ?
-			header.classList.add("darker"):
-				header.classList.remove("darker")
+		scrollPosition > 50 ?
+			header.classList.add("shorter"):
+				header.classList.remove("shorter")
 }
 
 burger.addEventListener("click", toggleNav);
