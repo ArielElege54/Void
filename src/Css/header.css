@@ -1,7 +1,7 @@
 header {
 	height: 2.5em;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 1);
+	background: rgba(44, 44, 44, 0.8);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -57,7 +57,7 @@ header .join {
 
 @media screen and (max-width: 30em) {
 	header {
-		background: black;
+		background: rgba(44, 44, 44, 0.6);
 		height: 3.8em;
 		display: flex;
 		align-items: center;
@@ -100,16 +100,16 @@ header .join {
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		background: rgba(0, 0, 0, 0.97);
+		background: rgba(20, 20, 20, 0.97);
 		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
-		padding: 0 2rem 5rem 5rem;
+		padding-left: 1rem;
 	}
 	.bnav__list-items {
-		margin: 10% 0;
+		margin: 1rem 0;
 	}
 
 	.bnav-links {
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 	}
 	.join-link {
 		display: inherit;
@@ -124,5 +124,13 @@ header .join {
 	}
 	.shorter {
 		height: 2rem;
+	}
+}
+@media screen and (max-width: 18rem) {
+	.bnav {
+		width: 70%;
+	}
+	.bnav-links {
+		font-size: 1.2rem;
 	}
 }
