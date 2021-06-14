@@ -3,16 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			media="(max-width: 45em)"
-			href="Css/mobilecontact.css"
-		/>
-		<link
-			rel="stylesheet"
-			media="(min-width: 45em)"
-			href="Css/widescreencontact.css"
-		/>
+		<link rel="stylesheet" href="/src/Css/header.css" />
+		<link rel="stylesheet" href="../src/Css/contact.css" />
 		<title>Blue Tempest Contact Page</title>
 	</head>
 	<body>
@@ -23,47 +15,67 @@
 			<nav class="bnav">
 				<ul class="bnav__list">
 					<li class="bnav__list-items hom">
-						<a href="./index.html" class="bnav-links">HOME</a>
+						<a href="./index.html" class="bnav-links active">HOME</a>
 					</li>
 					<li class="bnav__list-items abo">
 						<a href="./about.html" class="bnav-links">ABOUT</a>
 					</li>
 					<li class="bnav__list-items soc">
-						<a href="./contact.html" class="bnav-links active">CONTACT</a>
+						<a href="./contact.html" class="bnav-links">CONTACT</a>
 					</li>
 					<li class="bnav__list-items tal">
 						<a href="#" class="bnav-links">TALES</a>
 					</li>
+					<li class="bnav__list-items join-link">
+						<a href="#" class="bnav-links">JOIN</a>
+					</li>
 				</ul>
 			</nav>
+			<button class="bnav-burger">Menu</button>
+			<div class="site-header">
+				<h3><a href="./index.html" class="site-header__text join">JOIN</a></h3>
+			</div>
 		</header>
-		<span class="burger-wrapper"></span>
-		<span class="bnav-burger"></span>
-		<main class="bcontact">
-			<img alt="Author" class="author-img" src="images/yt.jpg" />
-			<section class="facebook">
-				<a href="https://web.facebook.com/ariel.elege.5">
-					<i class="fab fa-facebook fa-2x"></i> FACEBOOK
-				</a>
-			</section>
-			<section class="instagram">
-				<a href="https://www.instagram.com/ariel_elege/">
-					<i class="fab fa-instagram fa-2x"></i> INSTAGRAM
-				</a>
-			</section>
-			<section class="whatsapp">
-				<a href="api.whatsapp.com/send?phone=2347069405854">
-					<i class="fab fa-whatsapp fa-2x"></i> WHATSAPP
-				</a>
-			</section>
-			<section class="email">
-				<a href="mailto:arielelege@gmail.com">
-					<i class="fab fa-email fa-2x"></i> GMAIL
-				</a>
-			</section>
-		</main>
 		<footer class="bfooter">
-			<p>copyright &copy; 2021</p>
+			<section class="footer-cont">
+				<div class="footer-items link">
+					<h3>LINKS</h3>
+					<a href="./index.html" class="links">HOME</a>
+					<a href="./about.html" class="links">ABOUT US</a>
+					<a href="./contact.html" class="links">CONTACT US</a>
+					<a href="#" class="links">TALES</a>
+				</div>
+				<div class="footer-items popular">
+					<h3>POPULAR</h3>
+					<a href="#" class="sto">Version Control</a>
+					<a href="#" class="sto">How I Got Started</a>
+					<a href="#" class="sto">CSS Tips</a>
+					<a href="#" class="sto">Language before Framework</a>
+				</div>
+				<div class="footer-items social">
+					<h3>SOCIALS</h3>
+					<a href="https://web.facebook.com/arielelege">
+						<i class="fab fa-facebook fa-2x"></i> FACEBOOK
+					</a>
+					<a href="https://www.instagram.com/ariel_elege/">
+						<i class="fab fa-instagram fa-2x"></i> INSTAGRAM
+					</a>
+					<a href="api.whatsapp.com/send?phone=2347069405854">
+						<i class="fab fa-whatsapp fa-2x"></i> WHATSAPP
+					</a>
+				</div>
+				<div class="footer-items contact-form">
+					<h1>Contact Us</h1>
+					<form action="">
+						<input type="text" placeholder="Name" id="name" />
+						<input type="email" name="" placeholder="Email" id="email" />
+						<input type="text" placeholder="Subject" id="subject" />
+						<input type="text" placeholder="Message" id="message" />
+						<button class="contactBtn">Submit</button>
+					</form>
+				</div>
+			</section>
+			<p class="copyright">copyright &copy; 2021</p>
 		</footer>
 		<script src="main.js"></script>
 	</body>

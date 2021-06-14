@@ -1,0 +1,104 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	box-sizing: border-box;
+	background: url('../../dist/images/stars.png') center center;
+	background-repeat: repeat;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: sans-serif;
+	overflow-x: hidden;
+	color: white;
+}
+ul {
+	list-style-type: none;
+}
+.bfooter {
+	width: 100%;
+	border-top: 1px solid grey;
+	padding-top: 1rem;
+	background-color: black;
+}
+.footer-cont {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.footer-items {
+	display: flex;
+	max-width: 30%;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem;
+}
+.footer-items h3 {
+	border-bottom: 1px dashed white;
+}
+.footer-items a {
+	margin: 0.4rem 0;
+	text-align: center;
+	color: rgb(199, 199, 199);
+}
+.footer-items a:hover {
+	filter: brightness(50%);
+}
+.contact-form h1 {
+	margin-left: 0.3rem;
+	width: 100%;
+}
+.contact-form input {
+	width: 11rem;
+	margin: 0.3rem;
+}
+
+.contact-form input:focus {
+	outline: none;
+	border-radius: 0.4rem;
+}
+
+#name,
+#email {
+	height: 1.7rem;
+}
+#subject {
+	height: 2rem;
+}
+#message {
+	height: 4rem;
+}
+.contact-form button {
+	padding: 0.5rem;
+	margin-left: 0.3rem;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+.contact-form button:hover {
+	filter: opacity(0.6);
+}
+.copyright {
+	width: fit-content;
+	margin: auto auto 2rem;
+}
+@media screen and (max-width: 30em) {
+	.footer-cont {
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer-items {
+		margin-bottom: 2rem;
+		width: 90%;
+	}
+	.contact-form h1 {
+		text-align: center;
+	}
+}

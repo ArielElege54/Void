@@ -3,12 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" media="(max-width: 45em)" href="Css/mobileabout.css" />
-		<link
-			rel="stylesheet"
-			media="(min-width: 45em)"
-			href="Css/widescreenabout.css"
-		/>
+		<link rel="stylesheet" href="../src/Css/header.css" />
+		<link rel="stylesheet" href="../src/Css/about.css" />
 		<title>Blue Tempest About Page</title>
 	</head>
 	<body>
@@ -19,10 +15,10 @@
 			<nav class="bnav">
 				<ul class="bnav__list">
 					<li class="bnav__list-items hom">
-						<a href="./index.html" class="bnav-links ">HOME</a>
+						<a href="./index.html" class="bnav-links active">HOME</a>
 					</li>
 					<li class="bnav__list-items abo">
-						<a href="./about.html" class="bnav-links active">ABOUT</a>
+						<a href="./about.html" class="bnav-links">ABOUT</a>
 					</li>
 					<li class="bnav__list-items soc">
 						<a href="./contact.html" class="bnav-links">CONTACT</a>
@@ -30,63 +26,47 @@
 					<li class="bnav__list-items tal">
 						<a href="#" class="bnav-links">TALES</a>
 					</li>
+					<li class="bnav__list-items join-link">
+						<a href="#" class="bnav-links">JOIN</a>
+					</li>
 				</ul>
 			</nav>
+			<button class="bnav-burger">Menu</button>
+			<div class="site-header">
+				<h3><a href="./index.html" class="site-header__text join">JOIN</a></h3>
+			</div>
 		</header>
-		<span class="burger-wrapper"></span>
-		<span class="bnav-burger"></span>
-          <main class="babout">
-			<img alt="Author" class="author-img" src="images/yt.jpg" /> 
-               <section class="about">
+		<main class="babout">
+			<div class="author-img-cont">
+				<img alt="Author" class="author-img" src="images/author-3.jpeg" />
+			</div>
+			<section class="about-stuff">
 				<h3 class="about-headers">BLUE TEMPEST</h3>
-                    <div class="about-divs">
-					<img src="./images/IMG_7403.jpeg" class="author-real-img" alt="author-real-img">
-				     <p class="about-texts">
-					     em nam. Rerum soluta consequatur iusto ipsa debitis iste facere
-					     veritatis at autem nobis esse minus quos, sed molestias exercitationem
-					     veniam lau Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, abo. rat iusto perspiciatis. Provident!
-						Aliquam voluptatem tempora esse accusantium explicabo nemo inventore sequi impedit, consequatur ad cum modi iure, quasi eaque nobis fugit eum neque alias voluptatibus commodi architecto vitae dicta veniam! Praesentium, voluptates?
-						Atque, quae animi! Accusamus dolorum non aliquam facere sapiente quasi rerum dolore dolores cumque consectetur perspiciatis pariatur tempore dolorem, eveniet ea sed sequi quia voluptates veniam, nulla quaerat odio ut.
-						Ipsam magnam architecto sequi natus alias laudantium maxime nostrum
-					</p>
-                    </div>
-				<h3 class="about-headers">HIS IDOLS</h3>
-                    <div class="about-divs">
-				     <p class="about-texts reorder">
-					     em nam. Rerum soluta consequatur iusto ipsa debitis iste facere
-					     veritatis at autem nobis esse minus quos, sed molestias exercitationem
-					     veniam lau Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ex enim maiores, impedit adipisci unde beatae libero laudantium in labore tempora excepturi consequatur, magnam dolores quidem asperiores illum quo? Perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquam eveniet eius odio voluptas tempore nobis placeat repellendus, nesciunt delectus quae nam atque aut blanditiis repellat velit qui maxime fugit. orem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore quaerat id sapiente quam aliquid distinctio nulla blanditiis harum eveniet, aut nam debitis, enim ab nobis! Provident dolore rerum voluptatum.
-					</p>
-					<img src="./images/fire.jpg" class="idols-img" alt="idol-img">
-                    </div>
-				<h3 class="about-headers">ANIME RECOMMENDATIONS😜</h3>
-                    <div class="about-divs">
-					<img src="./images/candy.jpg" class="anime-img " alt="anime-img">
-				     <p class="about-texts">
-					     em nam. Rerum soluta consequatur iusto ipsa debitis iste facere
-					     veritatis at autem nobis esse minus quos, sed molestias exercitationem
-					     veniam lau Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum mollitia fuga molestias excepturi necessitatibus soluta. Ipsa mollitia ab porro sint sit delectus provident voluptatem hic velit, quisquam incidunt aspernatur sunt.
-                         </p>
-                    </div>
+				<p class="about-texts">
+					Is an alias of Ariel Elege, who is a self-taught front end web
+					developer and an aspiring fullstack developer. This website is just a
+					blog on his experiences and advices. Check them out
+					<a href="#">here!!!</a>
+				</p>
 			</section>
-          </main>
+		</main>
 		<footer class="bfooter">
-			<section>
-				<div class="link">
+			<section class="footer-cont">
+				<div class="footer-items link">
 					<h3>LINKS</h3>
 					<a href="./index.html" class="links">HOME</a>
 					<a href="./about.html" class="links">ABOUT US</a>
 					<a href="./contact.html" class="links">CONTACT US</a>
 					<a href="#" class="links">TALES</a>
 				</div>
-				<div class="popular">
+				<div class="footer-items popular">
 					<h3>POPULAR</h3>
-					<a href="#" class="sto">I Changed Schools</a>
-					<a href="#" class="sto">How I Almost Drowned</a>
-					<a href="#" class="sto">I didn't Know It Was Bad</a>
-					<a href="#" class="sto">He got Stuck In A Roof</a>
+					<a href="#" class="sto">Version Control</a>
+					<a href="#" class="sto">How I Got Started</a>
+					<a href="#" class="sto">CSS Tips</a>
+					<a href="#" class="sto">Language before Framework</a>
 				</div>
-				<div class="social">
+				<div class="footer-items social">
 					<h3>SOCIALS</h3>
 					<a href="https://web.facebook.com/arielelege">
 						<i class="fab fa-facebook fa-2x"></i> FACEBOOK
@@ -97,9 +77,19 @@
 					<a href="api.whatsapp.com/send?phone=2347069405854">
 						<i class="fab fa-whatsapp fa-2x"></i> WHATSAPP
 					</a>
-				<div/>
+				</div>
+				<div class="footer-items contact-form">
+					<h1>Contact Us</h1>
+					<form action="">
+						<input type="text" placeholder="Name" id="name" />
+						<input type="email" name="" placeholder="Email" id="email" />
+						<input type="text" placeholder="Subject" id="subject" />
+						<input type="text" placeholder="Message" id="message" />
+						<button class="contactBtn">Submit</button>
+					</form>
+				</div>
 			</section>
-			<p>copyright &copy; 2021</p>
+			<p class="copyright">copyright &copy; 2021</p>
 		</footer>
 		<script src="about.js"></script>
 		<script src="main.js"></script>
