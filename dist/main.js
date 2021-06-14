@@ -40,7 +40,7 @@ let toggleNav = (event) => {
 	}
 }
 
-let headerColorShifter = () => {
+let headerShortener = () => {
 	scrollPosition = body.scrollTop || docElem.scrollTop;
 		scrollPosition > 50 ?
 			header.classList.add("shorter"):
@@ -50,7 +50,7 @@ let headerColorShifter = () => {
 burger.addEventListener("click", toggleNav);
 mainTag.addEventListener("click", removeNav);
 footerTag.addEventListener("click", removeNav);
-window.addEventListener("scroll", headerColorShifter);
+window.addEventListener("scroll", headerShortener);
 
 contactInput.forEach(input => {
 	input.addEventListener('focus', () => {
