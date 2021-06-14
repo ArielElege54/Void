@@ -21,6 +21,9 @@ body {
 ul {
 	list-style-type: none;
 }
+main {
+	height: 20rem;
+}
 .bfooter {
 	width: 100%;
 	border-top: 1px solid grey;
