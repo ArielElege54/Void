@@ -18,6 +18,9 @@ body {
 	overflow-x: hidden;
 	color: white;
 }
+body > * {
+	z-index: 1;
+}
 ul {
 	list-style-type: none;
 }
@@ -122,6 +125,37 @@ main {
 .author-text button:hover {
 	filter: invert(100%);
 }
+.story {
+	position: relative;
+}
+.story > * {
+	position: relative;
+	z-index: 1;
+}
+.story::before {
+	z-index: 0;
+	position: absolute;
+	content: '';
+	width: 2rem;
+	height: 2rem;
+	border: 0.3rem solid rgba(255, 255, 255, 0.61);
+	border-radius: 50%;
+	top: 10%;
+	left: 10%;
+	animation: rounder 7s infinite;
+}
+.story::after {
+	z-index: 0;
+	position: absolute;
+	content: '';
+	width: 2rem;
+	height: 2rem;
+	border: 0.3rem solid rgba(255, 255, 255, 0.61);
+	border-radius: 50%;
+	top: 10%;
+	right: 10%;
+	animation: rounder2 7s infinite;
+}
 
 .story-header {
 	text-align: center;
@@ -218,7 +252,8 @@ main {
 	height: 2rem;
 }
 #message {
-	height: 4rem;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
 }
 .contact-form button {
 	padding: 0.5rem;
@@ -284,5 +319,25 @@ main {
 	100% {
 		transform: translateY(0rem);
 		filter: opacity(1);
+	}
+}
+@keyframes rounder {
+	0% {
+	}
+	50% {
+		transform: translateY(245vh);
+	}
+	100% {
+	}
+}
+@keyframes rounder2 {
+	0% {
+		transform: translateY(245vh);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(245vh);
 	}
 }

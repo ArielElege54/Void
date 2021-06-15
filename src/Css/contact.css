@@ -22,7 +22,11 @@ ul {
 	list-style-type: none;
 }
 main {
-	height: 20rem;
+	margin-top: 3rem;
+	display: flex;
+}
+.contact-stuff {
+	margin: 1rem;
 }
 .bfooter {
 	width: 100%;
@@ -77,7 +81,8 @@ main {
 	height: 2rem;
 }
 #message {
-	height: 4rem;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
 }
 .contact-form button {
 	padding: 0.5rem;
