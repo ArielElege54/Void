@@ -42,7 +42,7 @@ main {
 .hero-content::before {
 	content: '';
 	position: absolute;
-	opacity: 0.1;
+	opacity: 0.2;
 	top: 0;
 	left: 0;
 	height: 35em;
@@ -87,6 +87,7 @@ main {
 .author {
 	width: 80%;
 	margin-bottom: 2rem;
+	margin-top: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -101,7 +102,7 @@ main {
 	shape-outside: circle(5rem at 6rem 5rem);
 }
 .author-name {
-	color: rgb(136, 136, 255);
+	color: rgb(2, 255, 255);
 	font-size: 2rem;
 }
 .author-text {
