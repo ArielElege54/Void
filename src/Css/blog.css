@@ -24,20 +24,17 @@ ul {
 main {
 	margin-top: 3rem;
 }
-.story-header {
-	text-align: center;
-	font-size: 2rem;
-}
-.stories-container {
+
+.blogs-container {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
 }
-.stories-container a {
+.blogs-container a {
 	text-decoration-color: white;
 }
-.stories {
+.blogs {
 	display: flex;
 	flex-direction: column;
 	max-width: 18rem;
@@ -48,22 +45,22 @@ main {
 	border-radius: 0.4rem;
 	transition: transform 0.5s;
 }
-.stories:hover {
+.blogs:hover {
 	transform: scale(1.1);
 }
-.stories:hover img {
+.blogs:hover img {
 	filter: brightness(110%);
 }
-.stories-img {
+.blogs-img {
 	border-radius: 0.4rem 0.4rem 0 0;
 	width: 100%;
 	height: 8rem;
 }
-.stories-header {
+.blogs-header {
 	font-size: 1.4rem;
 	margin: auto 0.5rem;
 }
-.stories-text {
+.blogs-text {
 	margin: auto 0.5rem;
 }
 

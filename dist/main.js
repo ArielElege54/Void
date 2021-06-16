@@ -1,8 +1,8 @@
 let burger = document.querySelector(".bnav-burger") 
 let nav = document.querySelector(".bnav")
 let navList = document.querySelector(".bnav__list")
-let navListItems = Array.from(document.querySelectorAll(".bnav__list-items"))
-let navLinks = Array.from(document.querySelectorAll(".bnav-links"))
+let navListItems = document.querySelectorAll(".bnav__list-items")
+let navLinks = document.querySelectorAll(".bnav-links")
 let activeLink = document.querySelector(".active")
 let mainTag = document.querySelector("main")
 let footerTag = mainTag.nextElementSibling
@@ -17,7 +17,7 @@ let scrollPosition = Math.round(window.scrollY)
 let docHeight = Math.max(
      body.scrollHeight, body.offsetHeight, docElem.clientHeight, docElem.scrollHeight, docElem.offsetHeight
 );
-let contactInput = Array.from(document.querySelectorAll('.contact-form input'))
+let contactInput = document.querySelectorAll('.contact-form input')
 
 
 let removeNav = () => {
