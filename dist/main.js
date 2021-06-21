@@ -1,8 +1,7 @@
 let burger = document.querySelector(".bnav-burger") 
 let nav = document.querySelector(".bnav")
 let navList = document.querySelector(".bnav__list")
-let navListItems = document.querySelectorAll(".bnav__list-items")
-let navLinks = document.querySelectorAll(".bnav-links")
+let navLinks = Array.from(document.querySelectorAll(".bnav-links"))
 let activeLink = document.querySelector(".active")
 let mainTag = document.querySelector("main")
 let footerTag = mainTag.nextElementSibling
@@ -25,6 +24,7 @@ let removeNav = () => {
 		burger.innerText = 'Menu'
 		burger.classList.remove("bnav-burger-open")
 		nav.classList.remove("bnav-open")
+		navLinks.forEach(link => link.classList.remove('bnav-links-open'))
 	}
 }
 let toggleNav = (event) => {
@@ -33,10 +33,23 @@ let toggleNav = (event) => {
 		burger.innerText = 'X'
 		burger.classList.add("bnav-burger-open");
 		nav.classList.add("bnav-open");
+
+		navLinks.forEach(link => {
+			link.classList.add('hide')
+			let sld = setTimeout(
+				() => link.classList.add('bnav-links-open'),
+				(navLinks.indexOf(link) + 1) * 300
+			)
+
+			if ( link.classList.contains('bnav-links-open') ) {
+				clearTimeout(sld)
+			}
+		})
 	} else {
 		burger.innerText = 'Menu'
 		burger.classList.remove("bnav-burger-open");
 		nav.classList.remove("bnav-open");
+		navLinks.forEach(link => link.classList.remove('bnav-links-open'))
 	}
 }
 
@@ -47,10 +60,18 @@ let headerShortener = () => {
 				header.classList.remove("shorter")
 }
 
+let footerShow = () => {
+	if (footerTag.getBoundingClientRect().top + (docElem.clientHeight / 10) < docElem.clientHeight / 2) {
+		footerTag.classList.add("footer-show");
+ 	}
+}
+
 burger.addEventListener("click", toggleNav);
 mainTag.addEventListener("click", removeNav);
 footerTag.addEventListener("click", removeNav);
+window.addEventListener("load", () => footerTag.classList.add('hide'))
 window.addEventListener("scroll", headerShortener);
+window.addEventListener("scroll", footerShow);
 
 contactInput.forEach(input => {
 	input.addEventListener('focus', () => {

@@ -30,7 +30,7 @@ main {
 }
 
 .hero-content {
-	height: 35em;
+	min-height: 33em;
 	width: 100%;
 	color: rgb(255, 255, 255);
 	display: flex;
@@ -38,6 +38,7 @@ main {
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
+	position: relative;
 }
 .hero-content::before {
 	content: '';
@@ -45,7 +46,7 @@ main {
 	opacity: 0.3;
 	top: 0;
 	left: 0;
-	height: 35em;
+	min-height: 33em;
 	width: 100%;
 	background: url('../../dist/images/black\ hpsp.jpg');
 	background-size: cover;
@@ -124,7 +125,7 @@ main {
 	transition: filter 0.5s;
 }
 .author-text button:hover {
-	filter: invert(100%);
+	filter: brightness(50%);
 }
 .blog {
 	position: relative;
@@ -183,7 +184,7 @@ main {
 	transition: transform 0.5s;
 }
 .blogs:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 .blogs:hover img {
 	filter: brightness(110%);
@@ -281,6 +282,7 @@ main {
 	}
 	.author {
 		margin-top: 0;
+		margin-bottom: 5rem;
 	}
 	.author div {
 		display: flex;
@@ -337,6 +339,22 @@ main {
 	visibility: visible;
 	animation: slidedown 1s ease;
 }
+.hero-animate {
+	visibility: visible;
+}
+.hero-animate:nth-child(1) {
+	animation: bigEnter 1s ease;
+}
+.hero-animate:nth-child(2) {
+	animation: rotateY 1s ease;
+}
+.hero-animate:nth-child(3) {
+	animation: rotateX 1s ease;
+}
+.footer-show {
+	visibility: visible;
+	animation: rotateY 0.5s;
+}
 @keyframes slideleft {
 	0% {
 		transform: translateX(-100%);
@@ -345,38 +363,5 @@ main {
 	100% {
 		transform: translateX(0%);
 		filter: opacity(1);
-	}
-}
-@keyframes slideright {
-	0% {
-		transform: translateX(100%);
-		filter: opacity(0);
-	}
-	100% {
-		transform: translateX(0%);
-		filter: opacity(1);
-	}
-}
-@keyframes slidedown {
-	0% {
-		transform: translateY(-2rem);
-		filter: opacity(0);
-	}
-	100% {
-		transform: translateY(0rem);
-		filter: opacity(1);
-	}
-}
-@keyframes bigEnter {
-	0% {
-		transform: scale(0);
-		opacity: 0;
-	}
-	80% {
-		transform: scale(1.15);
-	}
-	100% {
-		transform: scale(1);
-		opacity: 1;
 	}
 }

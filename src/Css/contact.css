@@ -164,6 +164,7 @@ main::after {
 	width: fit-content;
 	margin: auto auto 2rem;
 }
+
 @media screen and (max-width: 30em) {
 	.contact-header {
 		margin-top: 2rem;
@@ -182,4 +183,11 @@ main::after {
 	.contact-form h1 {
 		text-align: center;
 	}
+}
+.hide {
+	visibility: hidden;
+}
+.footer-show {
+	visibility: visible;
+	animation: rotateY 0.5s;
 }
