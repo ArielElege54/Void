@@ -61,7 +61,7 @@ let headerShortener = () => {
 }
 
 let footerShow = () => {
-	if (footerTag.getBoundingClientRect().top + (docElem.clientHeight / 10) < docElem.clientHeight / 2) {
+	if (footerTag.getBoundingClientRect().top < docElem.clientHeight / 1.5) {
 		footerTag.classList.add("footer-show");
  	}
 }

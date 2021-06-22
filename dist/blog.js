@@ -3,7 +3,7 @@ let blogHeader = document.querySelector('.blog-header')
 
 let blogAnimation = (event) => {
    blogSlideStuff.forEach(stuff => {
-        if (stuff.getBoundingClientRect().top - (docElem.clientHeight / 10) < docElem.clientHeight - stuff.offsetHeight) {
+        if (stuff.getBoundingClientRect().top - (docElem.clientHeight / 5) < docElem.clientHeight - stuff.offsetHeight) {
              stuff.classList.add("blog-slide"); 
         }
    })
