@@ -80,11 +80,16 @@ ul {
 .about-headers {
 	text-align: center;
 	font-size: 3rem;
+	margin: 1rem;
 	color: rgb(2, 255, 255);
 }
 .about-texts {
 	font-size: 1.3em;
 }
+.about-texts:nth-of-type(1) {
+	margin-bottom: 1rem;
+}
+
 .about-texts a {
 	color: rgb(199, 199, 199);
 }
@@ -110,6 +115,7 @@ ul {
 }
 .footer-items h3 {
 	border-bottom: 1px dashed white;
+	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
 }
 .footer-items a {
 	margin: 0.4rem 0;
@@ -157,6 +163,7 @@ ul {
 	width: fit-content;
 	margin: auto auto 2rem;
 }
+
 @media screen and (max-width: 30em) {
 	.babout::after {
 		top: 17%;
@@ -181,6 +188,12 @@ ul {
 	}
 	.contact-form h1 {
 		text-align: center;
+	}
+}
+@media screen and (max-width: 17em) {
+	.author-img {
+		width: 12rem;
+		height: 12rem;
 	}
 }
 .hide {

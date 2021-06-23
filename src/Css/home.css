@@ -30,7 +30,7 @@ main {
 }
 
 .hero-content {
-	min-height: 33em;
+	min-height: 31rem;
 	width: 100%;
 	color: rgb(255, 255, 255);
 	display: flex;
@@ -46,7 +46,7 @@ main {
 	opacity: 0.3;
 	top: 0;
 	left: 0;
-	min-height: 33em;
+	min-height: 31em;
 	width: 100%;
 	background: url('../../dist/images/black\ hpsp.jpg');
 	background-size: cover;
@@ -55,17 +55,20 @@ main {
 	width: 100%;
 }
 .hero-content h1 {
-	filter: drop-shadow(1px 1px 7px black);
-	font-size: 4rem;
+	filter: drop-shadow(1px 1px 7px rgba(0, 255, 242, 0.5));
+	font-size: 4.5rem;
 	margin: 0 2rem;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 .hero-content h2 {
 	width: fit-content;
-	filter: drop-shadow(1px 1px 4px black);
-	font-size: 3rem;
+	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
+	font-size: 3.5rem;
 	margin: 0 2rem;
 	margin-bottom: 4rem;
+}
+.hero-content .author-name {
+	font-size: inherit;
 }
 .hero-content p {
 	background-color: rgba(119, 119, 119, 0.7);
@@ -87,8 +90,7 @@ main {
 }
 .author {
 	width: 80%;
-	margin-bottom: 2rem;
-	margin-top: 2rem;
+	margin: 6rem 0 5rem 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -103,7 +105,7 @@ main {
 	shape-outside: circle(5rem at 6rem 5rem);
 }
 .author-name {
-	color: rgb(2, 255, 255);
+	color: rgb(0, 209, 209);
 	font-size: 2rem;
 }
 .author-text {
@@ -129,6 +131,7 @@ main {
 }
 .blog {
 	position: relative;
+	overflow-y: hidden;
 }
 .blog > * {
 	position: relative;
@@ -162,6 +165,8 @@ main {
 .blog-header {
 	text-align: center;
 	font-size: 2rem;
+	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
+	margin: 0 1rem;
 }
 .blogs-container {
 	display: flex;
@@ -178,6 +183,7 @@ main {
 	max-width: 18rem;
 	min-height: 15rem;
 	margin: 1rem;
+	margin-bottom: 2rem;
 	background-color: rgba(255, 255, 255, 0.08);
 	color: white;
 	border-radius: 0.4rem;
@@ -197,6 +203,7 @@ main {
 .blogs-header {
 	font-size: 1.4rem;
 	margin: auto 0.5rem;
+	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.4));
 }
 .blogs-text {
 	margin: auto 0.5rem;
@@ -222,6 +229,7 @@ main {
 	margin: 1rem;
 }
 .footer-items h3 {
+	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
 	border-bottom: 1px dashed white;
 }
 .footer-items a {
@@ -270,6 +278,14 @@ main {
 	width: fit-content;
 	margin: auto auto 2rem;
 }
+@media screen and (max-width: 19em) {
+	.hero-content h1 {
+		margin-top: 4rem;
+	}
+	.hero-content p {
+		margin-bottom: 1rem;
+	}
+}
 @media screen and (max-width: 30em) {
 	.hero-content h1 {
 		font-size: 3rem;
@@ -277,12 +293,16 @@ main {
 	.hero-content h2 {
 		font-size: 2.5rem;
 	}
+	.hero-content .author-name {
+		font-size: 2.5rem;
+	}
+
 	.hero-content p {
 		font-size: 1.4rem;
 	}
 	.author {
-		margin-top: 0;
-		margin-bottom: 5rem;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
 	}
 	.author div {
 		display: flex;
@@ -306,7 +326,14 @@ main {
 		text-align: center;
 	}
 }
-
+@media screen and (min-width: 42em) {
+	.author-img {
+		width: 15rem;
+		height: 15rem;
+		shape-outside: circle(7.5rem at 7.5rem 7.5rem);
+		shape-margin: 1rem;
+	}
+}
 @keyframes rounder {
 	0% {
 	}

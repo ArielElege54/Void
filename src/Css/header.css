@@ -12,12 +12,11 @@ header {
 	backdrop-filter: blur(4px);
 }
 
-.site-header__text {
-	font-size: 1.2rem;
-	text-decoration: none;
-	color: rgb(2, 255, 255);
+.site-logo img {
+	width: 6rem;
+	filter: brightness(150%);
 }
-.site-header__text:hover {
+.site-logo:hover {
 	opacity: 0.8;
 }
 

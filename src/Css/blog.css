@@ -59,6 +59,7 @@ main {
 .blogs-header {
 	font-size: 1.4rem;
 	margin: auto 0.5rem;
+	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.4));
 }
 .blogs-text {
 	margin: auto 0.5rem;
@@ -86,6 +87,7 @@ main {
 }
 .footer-items h3 {
 	border-bottom: 1px dashed white;
+	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
 }
 .footer-items a {
 	margin: 0.4rem 0;
