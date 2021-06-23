@@ -81,18 +81,14 @@ main::after {
 	text-align: center;
 	grid-row: 1 / 3;
 }
-/* .contact-info-title {
-	margin: 1rem;
-} */
-/* .contact-info-value {
-	width: 10ch;
-} */
+
 .contact-form {
 	color: black;
 	background-color: white;
 	padding: 1.7rem;
 	max-width: 15rem;
 	min-width: 15rem;
+	margin-bottom: 4rem;
 }
 
 .contact-form h1 {
