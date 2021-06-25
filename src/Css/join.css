@@ -21,78 +21,10 @@ body {
 ul {
 	list-style-type: none;
 }
-
-.babout {
-	z-index: 1;
-	margin-top: 5rem;
-	margin-bottom: 3rem;
-	width: 100%;
-	position: relative;
-}
-.babout::after {
-	position: absolute;
-	content: '';
-	height: 2rem;
-	width: 2rem;
-	border: 7px rgba(255, 255, 255, 0.404) solid;
-	border-radius: 50%;
-	top: 30%;
-	right: 10%;
-	animation: roundabout2 3s infinite;
-	box-shadow: 0 3rem 0 rgba(255, 255, 255, 0.404),
-		0 6rem 0 rgba(255, 255, 255, 0.61);
-}
-.babout::before {
-	position: absolute;
-	content: '';
-	height: 2rem;
-	width: 2rem;
-	border: 7px rgba(255, 255, 255, 0.404) solid;
-	border-radius: 50%;
-	top: 30%;
-	left: 10%;
-	animation: roundabout 3s infinite;
-	box-shadow: 0 -3rem 0 rgba(255, 255, 255, 0.404),
-		0 -6rem 0 rgba(255, 255, 255, 0.61);
+main {
+	margin-top: 3rem;
 }
 
-.author-img-cont {
-	position: relative;
-	z-index: 1;
-	width: fit-content;
-	margin: auto;
-}
-.author-img {
-	width: 18rem;
-	height: 18rem;
-	border-radius: 50%;
-	box-shadow: 0 0 9px 9px rgba(255, 255, 255, 0.082),
-		0 0 2rem 2rem rgba(255, 255, 255, 0.295);
-}
-.about-stuff {
-	width: fit-content;
-	margin: auto;
-}
-.about-stuff > * {
-	margin: 0 2rem;
-	max-width: 70ch;
-}
-.about-headers {
-	text-align: center;
-	font-size: 3rem;
-	margin: 1rem;
-	color: rgb(2, 255, 255);
-}
-.about-texts {
-	font-size: 1.3em;
-}
-.about-texts:nth-of-type(1) {
-	margin-bottom: 1rem;
-}
-
-.about-texts a {
-	color: rgb(199, 199, 199);
-}
 .bfooter {
 	width: 100%;
 	border-top: 1px solid grey;
@@ -163,20 +95,9 @@ ul {
 	width: fit-content;
 	margin: auto auto 2rem;
 }
-
 @media screen and (max-width: 30em) {
-	.babout::after {
-		top: 17%;
-	}
-	.babout::before {
-		top: 17%;
-	}
-	.about-headers {
-		font-size: 2.3rem;
-	}
-	.author-img {
-		width: 15rem;
-		height: 15rem;
+	main {
+		margin-top: 5rem;
 	}
 	.footer-cont {
 		flex-direction: column;
@@ -190,34 +111,21 @@ ul {
 		text-align: center;
 	}
 }
-@media screen and (max-width: 17em) {
-	.author-img {
-		width: 12rem;
-		height: 12rem;
-	}
-}
 .hide {
 	visibility: hidden;
 }
+
 .footer-show {
 	visibility: visible;
 	animation: rotateY 0.5s;
 }
-@keyframes roundabout {
+@keyframes slidedown {
 	0% {
-	}
-	50% {
-		transform: translateX(70vw) rotateX(110deg);
+		transform: translateY(-2rem);
+		filter: opacity(0);
 	}
 	100% {
-	}
-}
-@keyframes roundabout2 {
-	0% {
-	}
-	50% {
-		transform: translateX(-70vw) rotateX(110deg);
-	}
-	100% {
+		transform: translateY(0rem);
+		filter: opacity(1);
 	}
 }
