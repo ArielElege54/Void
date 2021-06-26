@@ -129,12 +129,14 @@ ul {
 	margin-left: 0.3rem;
 	width: 100%;
 }
-.contact-form input {
+.contact-form input,
+textarea {
 	width: 11rem;
 	margin: 0.3rem;
 }
 
-.contact-form input:focus {
+.contact-form input:focus,
+textarea:focus {
 	outline: none;
 	border-radius: 0.4rem;
 }

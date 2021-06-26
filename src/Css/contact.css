@@ -95,7 +95,8 @@ main::after {
 	margin-bottom: 0.7rem;
 	width: 100%;
 }
-.contact-form input {
+.contact-form input,
+textarea {
 	width: 100%;
 	margin: 0.3rem;
 	background-color: transparent;
@@ -103,7 +104,8 @@ main::after {
 	border-bottom: 2px solid black;
 }
 
-.contact-form input:focus {
+.contact-form input:focus,
+textarea:focus {
 	outline: none;
 }
 

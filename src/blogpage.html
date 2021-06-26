@@ -29,27 +29,69 @@
 						<a href="./blog.html" class="bnav-links active">BLOG</a>
 					</li>
 					<li class="bnav__list-items join-link">
-						<a href="" class="bnav-links">JOIN</a>
+						<a href="./join.html" class="bnav-links">JOIN</a>
 					</li>
 				</ul>
 			</nav>
 			<button class="bnav-burger">Menu</button>
 			<div class="site-header">
-				<h3><a href="./index.html" class="site-header__text join">JOIN</a></h3>
+				<h3><a href="./join.html" class="site-header__text join">JOIN</a></h3>
 			</div>
 		</header>
 		<main>
-			<div class="blogs-container">
-				<a href="#" class="sone">
-					<article class="blogs">
-						<img src="./images/code.png" alt="blog image" class="blogs-img" />
-						<h3 class="blogs-header">How I got started</h3>
-						<p class="blogs-text">
-							Basically a laydown of how I got into web dev
-						</p>
-					</article>
-				</a>
-			</div>
+			<section class="blog-header-cont">
+				<h1 class="blogs-header">How I got started</h1>
+				<img src="./images/code.png" alt="blog image" class="blogs-img" />
+			</section>
+			<section class="toc">
+				<table border="8" class="toc-table">
+					<tr class="toc-row">
+						<th class="toc-head">Table Of Content</th>
+					</tr>
+					<tr class="toc-row">
+						<td class="toc-data"><a href="#first">Outset</a></td>
+					</tr>
+					<tr class="toc-row">
+						<td class="toc-data"><a href="#second">Python</a></td>
+					</tr>
+					<tr class="toc-row">
+						<td class="toc-data"><a href="#third">Web Dev</a></td>
+					</tr>
+				</table>
+			</section>
+			<section class="blog-text-cont">
+				<h3 class="blog-text-header" id="first">Outset</h3>
+				<p class="blog-text">
+					<img src="" alt="" />
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
+					quibusdam nihil fugiat voluptatum fugit autem ullam asperiores
+					suscipit atque tempora facere cum itaque odit molestias, quae ratione
+					obcaecati pariatur Lorem ipsum dolor sit amet consectetur adipisicing
+					elit. Fugit, eum. Minima impedit ipsum doloribus reiciendis officia
+					doloremque cumque quis quasi, iste eligendi similique ad optio,
+					temporibus delectus omnis voluptas excepturi!
+				</p>
+				<h3 class="blog-text-header" id="second">Python</h3>
+				<p class="blog-text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
+					quibusdam nihil fugiat voluptatum fugit autem ullam asperiores
+					suscipit atque tempora facere cum itaque odit molestias, quae ratione
+					obcaecati pariatur Lorem ipsum dolor sit amet consectetur adipisicing
+					elit. Fugit, eum. Minima impedit ipsum doloribus reiciendis officia
+					doloremque cumque quis quasi, iste eligendi similique ad optio,
+					temporibus delectus omnis voluptas excepturi!
+				</p>
+				<h3 class="blog-text-header" id="third">Web Dev</h3>
+				<p class="blog-text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
+					quibusdam nihil fugiat voluptatum fugit autem ullam asperiores
+					suscipit atque tempora facere cum itaque odit molestias, quae ratione
+					obcaecati pariatur Lorem ipsum dolor sit amet consectetur adipisicing
+					elit. Fugit, eum. Minima impedit ipsum doloribus reiciendis officia
+					doloremque cumque quis quasi, iste eligendi similique ad optio,
+					temporibus delectus omnis voluptas excepturi!
+				</p>
+			</section>
 		</main>
 		<footer class="bfooter">
 			<section class="footer-cont">
@@ -85,7 +127,7 @@
 						<input type="text" placeholder="Name" id="name" />
 						<input type="email" name="" placeholder="Email" id="email" />
 						<input type="text" placeholder="Subject" id="subject" />
-						<input type="text" placeholder="Message" id="message" />
+						<textarea placeholder="Message" id="message"></textarea>
 						<button class="contactBtn">Submit</button>
 					</form>
 				</div>
