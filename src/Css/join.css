@@ -24,7 +24,102 @@ ul {
 main {
 	margin-top: 3rem;
 }
+main > * {
+	position: relative;
+	z-index: 1;
+}
+main::after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-image: url('../images/speaker.jpg');
+	z-index: 0;
+	opacity: 0.5;
+}
+.form-cont {
+	display: flex;
+	flex-direction: column;
+}
+.form-header {
+	text-align: center;
+	margin: 0.7rem;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+	font-size: 1.8rem;
+}
+.forms {
+	background-color: hsl(180, 100%, 50%, 0.1);
+	border-radius: 1.7rem;
+	backdrop-filter: blur(4px) brightness(70%);
+	min-height: 13rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 2rem;
+	box-shadow: 0 0 30px hsl(180, 100%, 50%);
+	margin: 0 1rem;
+}
 
+.login-input,
+.signup-input {
+	color: #fff;
+	align-self: center;
+	background: transparent;
+	border: none;
+	border-bottom: 3px double white;
+	padding: 0.8rem;
+	font-size: 0.8rem;
+	transition: border-bottom-color 1s;
+}
+.form-cont input::placeholder {
+	color: hsl(0, 0%, 80%);
+}
+.form-cont input:focus {
+	outline: none;
+	border-bottom-color: hsl(180, 100%, 30%);
+}
+.form-cont input:focus::placeholder {
+	opacity: 0.2;
+}
+.submit-button {
+	border-radius: 0.2rem;
+	padding: 0.7rem;
+	cursor: pointer;
+	background: hsl(180, 100%, 50%);
+	border: none;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: filter 0.5s;
+}
+.submit-button:hover {
+	filter: saturate(20%) brightness(110%);
+}
+.submit-button:active {
+	background: hsl(180, 100%, 30%);
+	filter: none;
+}
+.switch-button {
+	border-radius: 0.2rem;
+	padding: 0.7rem;
+	cursor: pointer;
+	background: hsl(180, 100%, 40%);
+	border: none;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: filter 0.5s;
+	margin: 2rem;
+}
+.switch-button:hover {
+	filter: saturate(20%) brightness(110%);
+}
+.switch-button:active {
+	background: hsl(180, 100%, 30%);
+	filter: none;
+}
 .bfooter {
 	width: 100%;
 	border-top: 1px solid grey;
@@ -101,6 +196,10 @@ textarea:focus {
 	main {
 		margin-top: 5rem;
 	}
+	.login-input,
+	.signup-input {
+		max-width: 8rem;
+	}
 	.footer-cont {
 		flex-direction: column;
 		align-items: center;
@@ -116,7 +215,12 @@ textarea:focus {
 .hide {
 	visibility: hidden;
 }
-
+.destroy {
+	display: none;
+}
+.rebuild {
+	display: initial;
+}
 .footer-show {
 	visibility: visible;
 	animation: rotateY 0.5s;

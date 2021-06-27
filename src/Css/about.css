@@ -85,6 +85,7 @@ ul {
 }
 .about-texts {
 	font-size: 1.3em;
+	max-width: 65ch;
 }
 .about-texts:nth-of-type(1) {
 	margin-bottom: 1rem;

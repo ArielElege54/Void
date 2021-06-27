@@ -40,16 +40,36 @@
 		</header>
 		<main>
 			<section>
-				<form action="" class="forms">
-					<input type="email" class="login-input" />
-					<input type="password" class="login-input" />
-					<input type="submit" value="" />
-				</form>
-				<form action="" class="forms">
-					<input type="email" class="login-input" />
-					<input type="password" class="login-input" />
-					<input type="submit" value="" />
-				</form>
+				<section class="form-cont">
+					<h1 class="form-header">Sign Up</h1>
+					<form action="" class="forms">
+						<input
+							type="email"
+							class="signup-input"
+							placeholder="Email Address"
+						/>
+						<input
+							type="password"
+							class="signup-input"
+							placeholder="Password"
+						/>
+						<input type="submit" value="Create Account" class="submit-button" />
+					</form>
+					<button class="switch-button">Already Have An Account?</button>
+				</section>
+				<section class="form-cont">
+					<h1 class="form-header">Sign In</h1>
+					<form action="" class="forms">
+						<input
+							type="email"
+							class="login-input"
+							placeholder="Email Address"
+						/>
+						<input type="password" class="login-input" placeholder="Password" />
+						<input type="submit" class="submit-button" value="Login" />
+					</form>
+					<button class="switch-button">Don't Have An Account?</button>
+				</section>
 			</section>
 		</main>
 		<footer class="bfooter">
@@ -95,5 +115,6 @@
 			<p class="copyright">copyright &copy; 2021</p>
 		</footer>
 		<script src="main.js"></script>
+		<script src="join.js"></script>
 	</body>
 </html>
