@@ -3,7 +3,6 @@ let aboutSlideStuff = document.querySelectorAll('.aboutItems')
 let blogSlideStuff = document.querySelectorAll('.blogs')
 let blogHeader = document.querySelector('.blog-header')
 let heroAnimatedStuff = Array.from(document.querySelectorAll('.hero-stuff'))
-// event listeners
 
 let heroAnimation = (event) => {
      heroAnimatedStuff.forEach(stuff => {
@@ -12,6 +11,7 @@ let heroAnimation = (event) => {
           )
      })
 }
+
 let aboutAnimation = (event) => {
      aboutSlideStuff.forEach(stuff => {
           if (stuff.getBoundingClientRect().top + (docElem.clientHeight / 10) < docElem.clientHeight - stuff.offsetHeight) {
@@ -19,6 +19,7 @@ let aboutAnimation = (event) => {
           }
      })
 }
+
 let blogAnimation = (event) => {
      blogSlideStuff.forEach(stuff => {
           if (stuff.getBoundingClientRect().top - (docElem.clientHeight / 10) < docElem.clientHeight - stuff.offsetHeight) {
@@ -34,6 +35,7 @@ window.addEventListener('load', () => {
      heroAnimatedStuff.forEach(stuff => stuff.classList.add('hide'))
      blogHeader.classList.add('hide')
 })
+
 window.addEventListener("load", heroAnimation);
 window.addEventListener("scroll", aboutAnimation);
 window.addEventListener("scroll", blogAnimation);

@@ -111,7 +111,8 @@ main::after {
 	font-size: 1rem;
 	font-weight: bold;
 	transition: filter 0.5s;
-	margin: 2rem;
+	margin: 2.5rem;
+	margin-bottom: 3.5rem;
 }
 .switch-button:hover {
 	filter: saturate(20%) brightness(110%);
@@ -144,13 +145,28 @@ main::after {
 	border-bottom: 1px dashed white;
 	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
 }
+.footer-items .social-icons {
+	text-decoration: none;
+}
 .footer-items a {
+	display: flex;
+	align-items: center;
 	margin: 0.4rem 0;
 	text-align: center;
 	color: rgb(199, 199, 199);
 }
+
 .footer-items a:hover {
 	filter: brightness(50%);
+}
+.fa-facebook {
+	color: rgb(18, 18, 219);
+}
+.fa-instagram {
+	color: red;
+}
+.fa-whatsapp {
+	color: rgb(0, 255, 0);
 }
 .contact-form h1 {
 	margin-left: 0.3rem;
@@ -219,19 +235,20 @@ textarea:focus {
 	display: none;
 }
 .rebuild {
+	animation: rotateYY 1s ease;
 	display: initial;
 }
 .footer-show {
 	visibility: visible;
 	animation: rotateY 0.5s;
 }
-@keyframes slidedown {
+@keyframes rotateYY {
 	0% {
-		transform: translateY(-2rem);
-		filter: opacity(0);
+		transform: rotateY(60deg);
+		opacity: 0;
 	}
 	100% {
-		transform: translateY(0rem);
-		filter: opacity(1);
+		transform: rotateY(0);
+		opacity: 1;
 	}
 }
