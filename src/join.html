@@ -44,11 +44,13 @@
 					<h1 class="form-header">Sign Up</h1>
 					<form action="" class="forms">
 						<input
+							required
 							type="email"
 							class="signup-input"
 							placeholder="Email Address"
 						/>
 						<input
+							required
 							type="password"
 							class="signup-input"
 							placeholder="Password"
@@ -61,11 +63,17 @@
 					<h1 class="form-header">Sign In</h1>
 					<form action="" class="forms">
 						<input
+							required
 							type="email"
 							class="login-input"
 							placeholder="Email Address"
 						/>
-						<input type="password" class="login-input" placeholder="Password" />
+						<input
+							required
+							type="password"
+							class="login-input"
+							placeholder="Password"
+						/>
 						<input type="submit" class="submit-button" value="Login" />
 					</form>
 					<button class="switch-button">Don't Have An Account?</button>
@@ -83,14 +91,14 @@
 				</div>
 				<div class="footer-items popular">
 					<h3>POPULAR</h3>
-					<a href="#" class="sto">Version Control</a>
-					<a href="#" class="sto">How I Got Started</a>
-					<a href="#" class="sto">CSS Tips</a>
-					<a href="#" class="sto">Language before Framework</a>
+					<a href="./blogpage.html" class="sto">Version Control</a>
+					<a href="./blogpage.html" class="sto">How I Got Started</a>
+					<a href="./blogpage.html" class="sto">CSS Tips</a>
+					<a href="./blogpage.html" class="sto">Language before Framework</a>
 				</div>
 				<div class="footer-items social">
 					<h3>SOCIALS</h3>
-					,
+
 					<a href="https://web.facebook.com/arielelege" class="social-icons">
 						<i class="fab fa-facebook fa-2x"></i> FACEBOOK
 					</a>
@@ -107,10 +115,10 @@
 				<div class="footer-items contact-form">
 					<h1>Contact Us</h1>
 					<form action="">
-						<input type="text" placeholder="Name" id="name" />
-						<input type="email" name="" placeholder="Email" id="email" />
-						<input type="text" placeholder="Subject" id="subject" />
-						<textarea placeholder="Message" id="message"></textarea>
+						<input type="text" required placeholder="Name" id="name" />
+						<input type="email" required placeholder="Email" id="email" />
+						<input type="text" required placeholder="Subject" id="subject" />
+						<textarea placeholder="Message" required id="message"></textarea>
 						<button class="contactBtn">Submit</button>
 					</form>
 				</div>

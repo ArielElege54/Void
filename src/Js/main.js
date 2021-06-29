@@ -9,7 +9,7 @@ let footerTag = mainTag.nextElementSibling
 
 let docElem = document.documentElement
 
-let contactInput = document.querySelectorAll('.contact-form input')
+let contactInput = Array.from(document.querySelectorAll('.contact-form input'))
 
 let headerShortener = () => {
 	if (docElem.scrollTop > 50) {
@@ -27,7 +27,7 @@ let toggleNav = (event) => {
 		nav.classList.add("bnav-open");
 
 		navLinks.forEach(link => {
-			link.classList.add('hide')
+			link.classList.add('hide-link')
 			setTimeout(
 				() => link.classList.add('bnav-links-open'),
 				(navLinks.indexOf(link) + 1) * 300
@@ -63,7 +63,10 @@ footerTag.addEventListener("click", removeNav);
 window.addEventListener("load", () => footerTag.classList.add('hide'))
 window.addEventListener("scroll", footerShow);
 
+window.addEventListener("resize", )
+
 contactInput.forEach(input => {
+	let inputIndex = contactInput.indexOf(input)
 	input.addEventListener('change', () => (e) => {
 	  input.value = e.target.value
 	})

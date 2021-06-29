@@ -66,7 +66,9 @@ header .join {
 	.site-header__text {
 		color: white;
 	}
-
+	.hide-link {
+		visibility: hidden;
+	}
 	.join {
 		display: none;
 	}
