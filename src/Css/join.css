@@ -98,6 +98,9 @@ main::after {
 .submit-button:hover {
 	filter: saturate(20%) brightness(110%);
 }
+.submit-button:focus {
+	color: grey;
+}
 .submit-button:active {
 	background: hsl(180, 100%, 30%);
 	filter: none;
@@ -175,8 +178,10 @@ main::after {
 }
 .contact-form input,
 textarea {
+	font-size: 0.8rem;
 	width: 11rem;
 	margin: 0.3rem;
+	padding-left: 0.4rem;
 }
 
 .contact-form input:focus,
@@ -195,14 +200,16 @@ textarea:focus {
 #message {
 	padding-top: 1rem;
 	padding-bottom: 3rem;
+	font-weight: bold;
 }
-.contact-form button {
+
+.contactBtn {
 	padding: 0.5rem;
 	margin-left: 0.3rem;
-	font-size: 0.9rem;
+	font-weight: bold;
 	cursor: pointer;
 }
-.contact-form button:hover {
+.contact-Btn:hover {
 	filter: opacity(0.6);
 }
 .copyright {
@@ -229,9 +236,7 @@ textarea:focus {
 		text-align: center;
 	}
 }
-.hide {
-	visibility: hidden;
-}
+
 .destroy {
 	display: none;
 }
@@ -239,10 +244,14 @@ textarea:focus {
 	animation: rotateYY 1s ease;
 	display: initial;
 }
+.hide {
+	opacity: 0;
+}
 .footer-show {
-	visibility: visible;
+	opacity: 1;
 	animation: rotateY 0.5s;
 }
+
 @keyframes rotateYY {
 	0% {
 		transform: rotateY(60deg);

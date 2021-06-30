@@ -3,17 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="Create an account to like and comment on blogposts or login to an existing one"
+		/>
 		<link rel="stylesheet" href="./Css/join.css" />
 		<link rel="stylesheet" href="./Css/header.css" />
-		<title>Blue Tempest Contact Page</title>
+		<title>Sign Up Or Sign In | Void Media</title>
 	</head>
 	<body>
 		<header class="bheader">
 			<div class="site-header">
 				<a href="./index.html" class="site-logo"
-					><img src="./images/voidd.png" alt="Site Logo"
+					><img src="./images/site-logo.png" alt="Company Logo"
 				/></a>
 			</div>
+			<button type="menu" class="bnav-burger">Menu</button>
 			<nav class="bnav">
 				<ul class="bnav__list">
 					<li class="bnav__list-items hom">
@@ -26,16 +32,15 @@
 						<a href="./contact.html" class="bnav-links">CONTACT</a>
 					</li>
 					<li class="bnav__list-items tal">
-						<a href="./blog.html" class="bnav-links active">BLOG</a>
+						<a href="./blog.html" class="bnav-links">BLOG</a>
 					</li>
 					<li class="bnav__list-items join-link">
-						<a href="" class="bnav-links">JOIN</a>
+						<a href="./join.html" class="bnav-links active">JOIN</a>
 					</li>
 				</ul>
 			</nav>
-			<button class="bnav-burger">Menu</button>
 			<div class="site-header">
-				<h3><a href="./index.html" class="site-header__text join">JOIN</a></h3>
+				<a href="./join.html" class="site-header__text join">JOIN</a>
 			</div>
 		</header>
 		<main>
@@ -45,38 +50,60 @@
 					<form action="" class="forms">
 						<input
 							required
+							aria-required="true"
 							type="email"
 							class="signup-input"
 							placeholder="Email Address"
+							aria-label="Email"
 						/>
 						<input
 							required
+							aria-required="true"
 							type="password"
 							class="signup-input"
 							placeholder="Password"
+							aria-label="Password"
 						/>
-						<input type="submit" value="Create Account" class="submit-button" />
+						<input
+							type="submit"
+							aria-label="Create Account"
+							value="Create Account"
+							class="submit-button"
+						/>
 					</form>
-					<button class="switch-button">Already Have An Account?</button>
+					<button type="button" class="switch-button">
+						Already Have An Account?
+					</button>
 				</section>
 				<section class="form-cont">
 					<h1 class="form-header">Sign In</h1>
 					<form action="" class="forms">
 						<input
 							required
+							aria-required="true"
 							type="email"
 							class="login-input"
 							placeholder="Email Address"
+							aria-label="Email"
 						/>
 						<input
 							required
+							aria-required="true"
 							type="password"
 							class="login-input"
 							placeholder="Password"
+							aria-label="Password"
 						/>
-						<input type="submit" class="submit-button" value="Login" />
+						<input
+							type="submit"
+							aria-label="Login"
+							class="submit-button"
+							value="Login"
+						/>
 					</form>
-					<button class="switch-button">Don't Have An Account?</button>
+					<button type="button" class="switch-button">
+						Don't Have An Account?
+					</button>
 				</section>
 			</section>
 		</main>
@@ -115,11 +142,38 @@
 				<div class="footer-items contact-form">
 					<h1>Contact Us</h1>
 					<form action="">
-						<input type="text" required placeholder="Name" id="name" />
-						<input type="email" required placeholder="Email" id="email" />
-						<input type="text" required placeholder="Subject" id="subject" />
-						<textarea placeholder="Message" required id="message"></textarea>
-						<button class="contactBtn">Submit</button>
+						<input
+							type="text"
+							aria-required="true"
+							required
+							placeholder="Name"
+							id="name"
+							aria-label="Name"
+						/>
+						<input
+							type="email"
+							aria-required="true"
+							required
+							placeholder="Email"
+							id="email"
+							aria-label="Email"
+						/>
+						<input
+							type="text"
+							aria-required="true"
+							required
+							placeholder="Subject"
+							id="subject"
+							aria-label="Subject"
+						/>
+						<textarea
+							placeholder="Message"
+							aria-required="true"
+							required
+							id="message"
+							aria-label="Message"
+						></textarea>
+						<input type="submit" class="contactBtn" />
 					</form>
 				</div>
 			</section>

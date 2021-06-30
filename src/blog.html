@@ -11,9 +11,10 @@
 		<header class="bheader">
 			<div class="site-header">
 				<a href="./index.html" class="site-logo"
-					><img src="./images/voidd.png" alt="Site Logo"
+					><img src="./images/site-logo.png" alt="Company Logo"
 				/></a>
 			</div>
+			<button type="menu" class="bnav-burger">Menu</button>
 			<nav class="bnav">
 				<ul class="bnav__list">
 					<li class="bnav__list-items hom">
@@ -33,17 +34,21 @@
 					</li>
 				</ul>
 			</nav>
-			<button class="bnav-burger">Menu</button>
 			<div class="site-header">
-				<h3><a href="./join.html" class="site-header__text join">JOIN</a></h3>
+				<a href="./join.html" class="site-header__text join">JOIN</a>
 			</div>
 		</header>
 		<main>
+			<h1 class="page-header">Our Blogposts</h1>
 			<div class="blogs-container">
 				<a href="./blogpage.html" class="sone">
 					<article class="blogs">
-						<img src="./images/code.png" alt="blog image" class="blogs-img" />
-						<h3 class="blogs-header">How I got started</h3>
+						<img
+							src="./images/code-icon.png"
+							alt="Blogpost image"
+							class="blogs-img"
+						/>
+						<h4 class="blogs-header">How I got started</h4>
 						<p class="blogs-text">
 							Basically a laydown of how I got into web dev
 						</p>
@@ -51,8 +56,12 @@
 				</a>
 				<a href="./blogpage.html" class="stwo">
 					<article class="blogs">
-						<img src="./images/kidth.jpg" alt="blog image" class="blogs-img" />
-						<h3 class="blogs-header">Things To Consider First</h3>
+						<img
+							src="./images/kid-thinking.jpg"
+							alt="Blogpost image"
+							class="blogs-img"
+						/>
+						<h4 class="blogs-header">Things To Consider First</h4>
 						<p class="blogs-text">
 							I'll talk about things that you may not have thought of
 						</p>
@@ -60,8 +69,12 @@
 				</a>
 				<a href="./blogpage.html" class="sthree">
 					<article class="blogs">
-						<img src="./images/csswl.jpeg" alt="blog image" class="blogs-img" />
-						<h3 class="blogs-header">CSS Tips</h3>
+						<img
+							src="./images/css-wallpaper.jpeg"
+							alt="Blogpost image"
+							class="blogs-img"
+						/>
+						<h4 class="blogs-header">CSS Tips</h4>
 						<p class="blogs-text">
 							Learning CSS doesn't end with one tutorial video
 						</p>
@@ -70,11 +83,11 @@
 				<a href="./blogpage.html" class="sfour">
 					<article class="blogs">
 						<img
-							src="./images/laptops.jpeg"
-							alt="blog image"
+							src="./images/multiple-laptops.jpeg"
+							alt="Blogpost image"
 							class="blogs-img"
 						/>
-						<h3 class="blogs-header">Language before Framework</h3>
+						<h4 class="blogs-header">Language before Framework</h4>
 						<p class="blogs-text">
 							My opinion on learning a Language before a corresonding framework
 						</p>
@@ -82,19 +95,23 @@
 				</a>
 				<a href="./blogpage.html" class="sfive">
 					<article class="blogs">
-						<img src="./images/kidth2.jpg" alt="blog image" class="blogs-img" />
-						<h3 class="blogs-header">What should you learn?</h3>
+						<img
+							src="./images/kid-thinking-2.jpg"
+							alt="Blogpost image"
+							class="blogs-img"
+						/>
+						<h4 class="blogs-header">What should you learn?</h4>
 						<p class="blogs-text">Somewhat of a Roadmap</p>
 					</article>
 				</a>
 				<a href="./blogpage.html" class="ssix">
 					<article class="blogs">
 						<img
-							src="./images/laptop.jpeg"
-							alt="blog image"
+							src="./images/single-laptop.jpeg"
+							alt="Blogpost image"
 							class="blogs-img"
 						/>
-						<h3 class="blogs-header">Version Control</h3>
+						<h4 class="blogs-header">Version Control</h4>
 						<p class="blogs-text">Version Control is an absolute must</p>
 					</article>
 				</a>
@@ -134,11 +151,38 @@
 				<div class="footer-items contact-form">
 					<h1>Contact Us</h1>
 					<form action="">
-						<input type="text" required placeholder="Name" id="name" />
-						<input type="email" required placeholder="Email" id="email" />
-						<input type="text" required placeholder="Subject" id="subject" />
-						<textarea placeholder="Message" required id="message"></textarea>
-						<button class="contactBtn">Submit</button>
+						<input
+							type="text"
+							aria-required="true"
+							required
+							placeholder="Name"
+							id="name"
+							aria-label="Name"
+						/>
+						<input
+							type="email"
+							aria-required="true"
+							required
+							placeholder="Email"
+							id="email"
+							aria-label="Email"
+						/>
+						<input
+							type="text"
+							aria-required="true"
+							required
+							placeholder="Subject"
+							id="subject"
+							aria-label="Subject"
+						/>
+						<textarea
+							placeholder="Message"
+							aria-required="true"
+							required
+							id="message"
+							aria-label="Message"
+						></textarea>
+						<input type="submit" class="contactBtn" />
 					</form>
 				</div>
 			</section>

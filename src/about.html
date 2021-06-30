@@ -3,17 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="A little information about the CEO of Void Media"
+		/>
 		<link rel="stylesheet" href="./Css/about.css" />
 		<link rel="stylesheet" href="./Css/header.css" />
-		<title>Blue Tempest About Page</title>
+		<title>About Us Page | Void Media</title>
 	</head>
 	<body>
 		<header class="bheader">
 			<div class="site-header">
 				<a href="./index.html" class="site-logo"
-					><img src="./images/voidd.png" alt="Site Logo"
+					><img src="./images/site-logo.png" alt="Company Logo"
 				/></a>
 			</div>
+			<button type="menu" class="bnav-burger">Menu</button>
 			<nav class="bnav">
 				<ul class="bnav__list">
 					<li class="bnav__list-items hom">
@@ -33,22 +39,25 @@
 					</li>
 				</ul>
 			</nav>
-			<button class="bnav-burger">Menu</button>
 			<div class="site-header">
-				<h3><a href="./join.html" class="site-header__text join">JOIN</a></h3>
+				<a href="./join.html" class="site-header__text join">JOIN</a>
 			</div>
 		</header>
 		<main class="babout">
 			<div class="author-img-cont">
-				<img alt="Author" class="author-img" src="images/author-3.jpg" />
+				<img
+					alt="Image of author"
+					class="author-img"
+					src="images/author-image.jpg"
+				/>
 			</div>
 			<section class="about-stuff">
-				<h3 class="about-headers">VOID</h3>
+				<h1 class="about-headers">VOID</h1>
 				<p class="about-texts">
 					Is an alias of Ariel Elege, who is a self-taught front end web
-					developer and an aspiring fullstack developer. This website is just a
-					blog on his experiences some advice. Check them out
-					<a href="./blog.html">here!!!</a>.
+					developer and an aspiring fullstack developer. This website contains
+					blogs on his experiences some advice.
+					<a href="./blog.html">Check them out here!!!</a>.
 				</p>
 				<p class="about-texts">
 					Want to take a look at my portfolio?
@@ -91,11 +100,38 @@
 				<div class="footer-items contact-form">
 					<h1>Contact Us</h1>
 					<form action="">
-						<input type="text" required placeholder="Name" id="name" />
-						<input type="email" required placeholder="Email" id="email" />
-						<input type="text" placeholder="Subject" required id="subject" />
-						<textarea placeholder="Message" required id="message"></textarea>
-						<button class="contactBtn">Submit</button>
+						<input
+							type="text"
+							aria-required="true"
+							required
+							placeholder="Name"
+							id="name"
+							aria-label="Name"
+						/>
+						<input
+							type="email"
+							aria-required="true"
+							required
+							placeholder="Email"
+							id="email"
+							aria-label="Email"
+						/>
+						<input
+							type="text"
+							aria-required="true"
+							required
+							placeholder="Subject"
+							id="subject"
+							aria-label="Subject"
+						/>
+						<textarea
+							placeholder="Message"
+							aria-required="true"
+							required
+							id="message"
+							aria-label="Message"
+						></textarea>
+						<input type="submit" class="contactBtn" />
 					</form>
 				</div>
 			</section>

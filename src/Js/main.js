@@ -28,25 +28,32 @@ let toggleNav = (event) => {
 
 		navLinks.forEach(link => {
 			link.classList.add('hide-link')
+			link.tabIndex = '0'
 			setTimeout(
 				() => link.classList.add('bnav-links-open'),
 				(navLinks.indexOf(link) + 1) * 300
-			)
-		})
-	} else {
-		burger.innerText = 'Menu'
-		burger.classList.remove("bnav-burger-open");
-		nav.classList.remove("bnav-open");
-		navLinks.forEach(link => link.classList.remove('bnav-links-open'))
+				)
+			})
+		} else {
+			burger.innerText = 'Menu'
+			burger.classList.remove("bnav-burger-open");
+			nav.classList.remove("bnav-open");
+			navLinks.forEach(link => {
+				link.tabIndex = '-1'
+				link.classList.remove('bnav-links-open')
+			})
+		}
 	}
-}
 
 let removeNav = () => {
 	if ( nav.classList.contains('bnav-open') ) {
 		burger.innerText = 'Menu'
 		burger.classList.remove("bnav-burger-open")
 		nav.classList.remove("bnav-open")
-		navLinks.forEach(link => link.classList.remove('bnav-links-open'))
+		navLinks.forEach(link => {
+			link.tabIndex = '-1'
+			link.classList.remove('bnav-links-open')
+		})
 	}
 }
 
@@ -60,10 +67,26 @@ window.addEventListener("scroll", headerShortener);
 burger.addEventListener("click", toggleNav);
 mainTag.addEventListener("click", removeNav);
 footerTag.addEventListener("click", removeNav);
-window.addEventListener("load", () => footerTag.classList.add('hide'))
-window.addEventListener("scroll", footerShow);
+window.addEventListener("load", () => {
+	footerTag.classList.add('hide')
+	navLinks.forEach(link => {
+		if (link.getBoundingClientRect().left > docElem.scrollWidth) {
+			link.tabIndex = '-1'
+		}
+	})
+})
 
-window.addEventListener("resize", )
+window.addEventListener("resize", () => {
+	navLinks.forEach(link => {
+		if (link.getBoundingClientRect().left > docElem.scrollWidth) {
+			link.tabIndex = '-1'
+		} else {
+			link.tabIndex = '0'
+		}
+
+	})
+})
+window.addEventListener("scroll", footerShow);
 
 contactInput.forEach(input => {
 	let inputIndex = contactInput.indexOf(input)

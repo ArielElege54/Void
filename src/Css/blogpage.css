@@ -134,8 +134,10 @@ main {
 }
 .contact-form input,
 textarea {
+	font-size: 0.8rem;
 	width: 11rem;
 	margin: 0.3rem;
+	padding-left: 0.4rem;
 }
 
 .contact-form input:focus,
@@ -154,14 +156,16 @@ textarea:focus {
 #message {
 	padding-top: 1rem;
 	padding-bottom: 3rem;
+	font-weight: bold;
 }
-.contact-form button {
+
+.contactBtn {
 	padding: 0.5rem;
 	margin-left: 0.3rem;
-	font-size: 0.9rem;
+	font-weight: bold;
 	cursor: pointer;
 }
-.contact-form button:hover {
+.contactBtn:hover {
 	filter: opacity(0.6);
 }
 .copyright {
@@ -192,13 +196,9 @@ textarea:focus {
 	}
 }
 .hide {
-	visibility: hidden;
-}
-.blog-slide {
-	visibility: visible;
-	animation: slidedown 1s ease;
+	opacity: 0;
 }
 .footer-show {
-	visibility: visible;
+	opacity: 1;
 	animation: rotateY 0.5s;
 }

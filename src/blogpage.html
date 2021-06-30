@@ -3,17 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="Take a look at how I began my programming and web dev journey"
+		/>
 		<link rel="stylesheet" href="./Css/blogpage.css" />
 		<link rel="stylesheet" href="./Css/header.css" />
-		<title>Blue Tempest Contact Page</title>
+		<title>How I got started: Blogpost | Void Media</title>
 	</head>
 	<body>
 		<header class="bheader">
 			<div class="site-header">
 				<a href="./index.html" class="site-logo"
-					><img src="./images/voidd.png" alt="Site Logo"
+					><img src="./images/site-logo.png" alt="Company Logo"
 				/></a>
 			</div>
+			<button type="menu" class="bnav-burger">Menu</button>
 			<nav class="bnav">
 				<ul class="bnav__list">
 					<li class="bnav__list-items hom">
@@ -26,22 +32,21 @@
 						<a href="./contact.html" class="bnav-links">CONTACT</a>
 					</li>
 					<li class="bnav__list-items tal">
-						<a href="./blog.html" class="bnav-links active">BLOG</a>
+						<a href="./blog.html" class="bnav-links">BLOG</a>
 					</li>
 					<li class="bnav__list-items join-link">
 						<a href="./join.html" class="bnav-links">JOIN</a>
 					</li>
 				</ul>
 			</nav>
-			<button class="bnav-burger">Menu</button>
 			<div class="site-header">
-				<h3><a href="./join.html" class="site-header__text join">JOIN</a></h3>
+				<a href="./join.html" class="site-header__text join">JOIN</a>
 			</div>
 		</header>
 		<main>
 			<section class="blog-header-cont">
 				<h1 class="blogs-header">How I got started</h1>
-				<img src="./images/code.png" alt="blog image" class="blogs-img" />
+				<img src="./images/code-icon.png" alt="blog image" class="blogs-img" />
 			</section>
 			<section class="toc">
 				<table border="8" class="toc-table">
@@ -62,7 +67,11 @@
 			<section class="blog-text-cont">
 				<h3 class="blog-text-header" id="first">Outset</h3>
 				<p class="blog-text">
-					<img src="./images/python-t.png" class="blog-text-image" alt="" />
+					<img
+						src="./images/python-transparent-background.png"
+						class="blog-text-image"
+						alt=""
+					/>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
 					quibusdam nihil fugiat voluptatum fugit autem ullam asperiores
 					suscipit atque tempora facere cum itaque odit molestias, quae ratione
@@ -73,7 +82,11 @@
 				</p>
 				<h3 class="blog-text-header" id="second">Python</h3>
 				<p class="blog-text">
-					<img src="./images/python-t.png" class="blog-text-image" alt="" />
+					<img
+						src="./images/python-transparent-background.png"
+						class="blog-text-image"
+						alt=""
+					/>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
 					quibusdam nihil fugiat voluptatum fugit autem ullam asperiores
 					suscipit atque tempora facere cum itaque odit molestias, quae ratione
@@ -84,7 +97,11 @@
 				</p>
 				<h3 class="blog-text-header" id="third">Web Dev</h3>
 				<p class="blog-text">
-					<img src="./images/python-t.png" class="blog-text-image" alt="" />
+					<img
+						src="./images/python-transparent-background.png"
+						class="blog-text-image"
+						alt=""
+					/>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
 					quibusdam nihil fugiat voluptatum fugit autem ullam asperiores
 					suscipit atque tempora facere cum itaque odit molestias, quae ratione
@@ -129,11 +146,38 @@
 				<div class="footer-items contact-form">
 					<h1>Contact Us</h1>
 					<form action="">
-						<input type="text" required placeholder="Name" id="name" />
-						<input type="email" required placeholder="Email" id="email" />
-						<input type="text" required placeholder="Subject" id="subject" />
-						<textarea placeholder="Message" required id="message"></textarea>
-						<button class="contactBtn">Submit</button>
+						<input
+							type="text"
+							aria-required="true"
+							required
+							placeholder="Name"
+							id="name"
+							aria-label="Name"
+						/>
+						<input
+							type="email"
+							aria-required="true"
+							required
+							placeholder="Email"
+							id="email"
+							aria-label="Email"
+						/>
+						<input
+							type="text"
+							aria-required="true"
+							required
+							placeholder="Subject"
+							id="subject"
+							aria-label="Subject"
+						/>
+						<textarea
+							placeholder="Message"
+							aria-required="true"
+							required
+							id="message"
+							aria-label="Message"
+						></textarea>
+						<input type="submit" class="contactBtn" />
 					</form>
 				</div>
 			</section>

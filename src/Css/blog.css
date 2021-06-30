@@ -24,7 +24,11 @@ ul {
 main {
 	margin-top: 3rem;
 }
-
+.page-header {
+	text-align: center;
+	margin: 1rem;
+	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
+}
 .blogs-container {
 	display: flex;
 	justify-content: center;
@@ -118,8 +122,10 @@ main {
 }
 .contact-form input,
 textarea {
+	font-size: 0.8rem;
 	width: 11rem;
 	margin: 0.3rem;
+	padding-left: 0.4rem;
 }
 
 .contact-form input:focus,
@@ -138,14 +144,15 @@ textarea:focus {
 #message {
 	padding-top: 1rem;
 	padding-bottom: 3rem;
+	font-weight: bold;
 }
-.contact-form button {
+.contactBtn {
 	padding: 0.5rem;
 	margin-left: 0.3rem;
-	font-size: 0.9rem;
+	font-weight: bold;
 	cursor: pointer;
 }
-.contact-form button:hover {
+.contactBtn:hover {
 	filter: opacity(0.6);
 }
 .copyright {
@@ -169,13 +176,13 @@ textarea:focus {
 	}
 }
 .hide {
-	visibility: hidden;
+	opacity: 0;
 }
 .blog-slide {
-	visibility: visible;
+	opacity: 1;
 	animation: slidedown 1s ease;
 }
 .footer-show {
-	visibility: visible;
+	opacity: 1;
 	animation: rotateY 0.5s;
 }
