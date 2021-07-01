@@ -1,7 +1,7 @@
 header {
 	height: 2.5em;
 	width: 100%;
-	background: hsla(200, 100%, 10%, 0.9);
+	background: hsla(200, 100%, 20%, 0.9);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -14,7 +14,7 @@ header {
 
 .site-logo img {
 	width: 6rem;
-	filter: brightness(150%);
+	filter: brightness(200%);
 }
 .site-logo:hover {
 	opacity: 0.8;
@@ -79,8 +79,9 @@ header .join {
 		top: 1rem;
 		right: 1rem;
 		z-index: 1;
-		background-color: hsla(200, 100%, 75%);
+		background-color: hsla(200, 100%, 65%);
 		border-radius: 0.2rem;
+		font-weight: bold;
 		color: black;
 		padding: 0.4rem;
 		cursor: pointer;
@@ -102,7 +103,7 @@ header .join {
 		align-items: flex-end;
 		justify-content: center;
 		flex-direction: column;
-		background: hsla(200, 100%, 20%);
+		background: hsla(200, 100%, 40%);
 		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
 		padding-left: 1rem;
 	}

@@ -5,8 +5,7 @@
 
 body {
 	box-sizing: border-box;
-	background: url('../images/stars.png') center center;
-	background-repeat: repeat;
+	background-color: hsl(0, 0%, 90%);
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -16,7 +15,6 @@ body {
 	flex-direction: column;
 	font-family: sans-serif;
 	overflow-x: hidden;
-	color: white;
 }
 ul {
 	list-style-type: none;
@@ -34,26 +32,24 @@ ul {
 	content: '';
 	height: 2rem;
 	width: 2rem;
-	border: 7px rgba(255, 255, 255, 0.404) solid;
+	border: 7px hsla(0, 0%, 20%) solid;
 	border-radius: 50%;
 	top: 30%;
 	right: 10%;
 	animation: roundabout2 3s infinite;
-	box-shadow: 0 3rem 0 rgba(255, 255, 255, 0.404),
-		0 6rem 0 rgba(255, 255, 255, 0.61);
+	box-shadow: 0 3rem 0 hsla(0, 0%, 20%), 0 6rem 0 hsla(0, 0%, 20%, 0.61);
 }
 .babout::before {
 	position: absolute;
 	content: '';
 	height: 2rem;
 	width: 2rem;
-	border: 7px rgba(255, 255, 255, 0.404) solid;
+	border: 7px hsla(0, 0%, 20%) solid;
 	border-radius: 50%;
 	top: 30%;
 	left: 10%;
 	animation: roundabout 3s infinite;
-	box-shadow: 0 -3rem 0 rgba(255, 255, 255, 0.404),
-		0 -6rem 0 rgba(255, 255, 255, 0.61);
+	box-shadow: 0 -3rem 0 hsla(0, 0%, 20%), 0 -6rem 0 hsla(0, 0%, 20%, 0.61);
 }
 
 .author-img-cont {
@@ -66,8 +62,8 @@ ul {
 	width: 18rem;
 	height: 18rem;
 	border-radius: 50%;
-	box-shadow: 0 0 9px 9px rgba(255, 255, 255, 0.082),
-		0 0 2rem 2rem rgba(255, 255, 255, 0.295);
+	box-shadow: 0 0 9px 9px hsla(0, 0%, 0%, 0.182),
+		0 0 2rem 2rem hsla(0, 0%, 0%, 0.295);
 }
 .about-stuff {
 	width: fit-content;
@@ -81,7 +77,7 @@ ul {
 	text-align: center;
 	font-size: 3rem;
 	margin: 1rem;
-	color: rgb(2, 255, 255);
+	color: hsl(200, 100%, 15%);
 }
 .about-texts {
 	font-size: 1.3em;
@@ -92,13 +88,14 @@ ul {
 }
 
 .about-texts a {
-	color: rgb(199, 199, 199);
+	color: hsl(200, 100%, 20%);
 }
 .bfooter {
 	width: 100%;
 	border-top: 1px solid grey;
 	padding-top: 1rem;
-	background-color: black;
+	background-color: hsl(0, 0%, 5%);
+	color: hsl(0, 0%, 100%);
 }
 .footer-cont {
 	display: flex;
@@ -115,8 +112,8 @@ ul {
 	margin: 1rem;
 }
 .footer-items h3 {
-	border-bottom: 1px dashed white;
-	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
+	border-bottom: 1px dashed hsl(200, 100%, 60%);
+	color: hsl(200, 100%, 60%);
 }
 .footer-items .social-icons {
 	text-decoration: none;
@@ -126,8 +123,9 @@ ul {
 	align-items: center;
 	margin: 0.4rem 0;
 	text-align: center;
-	color: rgb(199, 199, 199);
+	color: hsl(0, 0%, 85%);
 }
+
 .footer-items a:hover {
 	filter: brightness(50%);
 }
@@ -144,7 +142,7 @@ ul {
 	color: rgb(2, 156, 2);
 }
 .contact-form h1 {
-	margin-left: 0.3rem;
+	margin-left: 0.6rem;
 	width: 100%;
 }
 .contact-form input,

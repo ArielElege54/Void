@@ -5,8 +5,7 @@
 
 body {
 	box-sizing: border-box;
-	background: url('../images/stars.png') center center;
-	background-repeat: repeat;
+	background-color: hsl(0, 0%, 90%);
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -16,7 +15,7 @@ body {
 	flex-direction: column;
 	font-family: sans-serif;
 	overflow-x: hidden;
-	color: white;
+	color: black;
 	width: 100%;
 }
 ul {
@@ -38,7 +37,7 @@ main {
 .blogs-header {
 	font-size: 2.8rem;
 	margin: 1.5rem 0.5rem;
-	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.4));
+	color: hsl(200, 100%, 15%);
 }
 .blogs-img {
 	width: 100%;
@@ -49,11 +48,16 @@ main {
 	margin: 1rem;
 }
 .toc-table {
-	background: linear-gradient(to bottom, rgb(33, 33, 33), rgb(0, 0, 0));
+	background: linear-gradient(
+		to bottom,
+		hsl(200, 100%, 40%),
+		hsl(200, 100%, 0%)
+	);
 }
 .toc-head {
 	padding: 1rem;
 	font-size: 1.4rem;
+	color: white;
 }
 .toc-data {
 	padding: 1rem;
@@ -85,7 +89,8 @@ main {
 	width: 100%;
 	border-top: 1px solid grey;
 	padding-top: 1rem;
-	background-color: black;
+	background-color: hsl(0, 0%, 5%);
+	color: hsl(0, 0%, 100%);
 }
 .footer-cont {
 	display: flex;
@@ -102,8 +107,8 @@ main {
 	margin: 1rem;
 }
 .footer-items h3 {
-	border-bottom: 1px dashed white;
-	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
+	border-bottom: 1px dashed hsl(200, 100%, 60%);
+	color: hsl(200, 100%, 60%);
 }
 .footer-items .social-icons {
 	text-decoration: none;
@@ -113,7 +118,7 @@ main {
 	align-items: center;
 	margin: 0.4rem 0;
 	text-align: center;
-	color: rgb(199, 199, 199);
+	color: hsl(0, 0%, 85%);
 }
 
 .footer-items a:hover {
@@ -132,7 +137,7 @@ main {
 	color: rgb(2, 156, 2);
 }
 .contact-form h1 {
-	margin-left: 0.3rem;
+	margin-left: 0.6rem;
 	width: 100%;
 }
 .contact-form input,

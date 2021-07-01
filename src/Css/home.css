@@ -46,7 +46,7 @@ main {
 	left: 0;
 	min-height: 31em;
 	width: 100%;
-	background: url('../images/black\ hpsp.jpg');
+	background: url('../images/headphones-and-lights-in-darkness.jpg');
 	background-size: cover;
 	z-index: 0;
 }
@@ -170,6 +170,7 @@ main {
 	margin: 0 1.5rem;
 	margin-bottom: 1.5rem;
 	text-transform: capitalize;
+	color: hsl(200, 100%, 15%);
 }
 .blogs-container {
 	display: flex;
@@ -206,6 +207,7 @@ main {
 .blogs-header {
 	font-size: 1.5rem;
 	margin: auto 0.5rem;
+	color: hsl(200, 100%, 15%);
 }
 .blogs-text {
 	margin: auto 0.5rem;
@@ -214,7 +216,8 @@ main {
 	width: 100%;
 	border-top: 1px solid grey;
 	padding-top: 1rem;
-	background-color: black;
+	background-color: hsl(0, 0%, 5%);
+	color: hsl(0, 0%, 100%);
 }
 .footer-cont {
 	display: flex;
@@ -231,9 +234,8 @@ main {
 	margin: 1rem;
 }
 .footer-items h3 {
-	filter: drop-shadow(1px 1px 4px hsla(200, 100%, 50%, 0.5));
-	border-bottom: 1px dashed white;
-	color: white;
+	border-bottom: 1px dashed hsl(200, 100%, 60%);
+	color: hsl(200, 100%, 60%);
 }
 .footer-items .social-icons {
 	text-decoration: none;
