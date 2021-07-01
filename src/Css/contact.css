@@ -176,6 +176,9 @@ textarea:focus {
 .footer-items a:hover {
 	filter: brightness(50%);
 }
+.fab {
+	margin-right: 0.5rem;
+}
 .fa-facebook {
 	color: rgb(18, 18, 219);
 }
@@ -183,7 +186,7 @@ textarea:focus {
 	color: red;
 }
 .fa-whatsapp {
-	color: rgb(0, 255, 0);
+	color: rgb(2, 156, 2);
 }
 .copyright {
 	width: fit-content;

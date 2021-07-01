@@ -131,6 +131,9 @@ ul {
 .footer-items a:hover {
 	filter: brightness(50%);
 }
+.fab {
+	margin-right: 0.5rem;
+}
 .fa-facebook {
 	color: rgb(18, 18, 219);
 }
@@ -138,7 +141,7 @@ ul {
 	color: red;
 }
 .fa-whatsapp {
-	color: rgb(0, 255, 0);
+	color: rgb(2, 156, 2);
 }
 .contact-form h1 {
 	margin-left: 0.3rem;

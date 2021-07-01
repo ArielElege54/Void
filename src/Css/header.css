@@ -53,7 +53,9 @@ header .join {
 .bnav__list-items .active {
 	text-decoration: underline;
 }
-
+.join:hover {
+	filter: opacity(0.7);
+}
 @media screen and (max-width: 30em) {
 	header {
 		background: rgba(44, 44, 44, 0.6);
