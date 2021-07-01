@@ -5,8 +5,7 @@
 
 body {
 	box-sizing: border-box;
-	background: url('../images/stars.png') center center;
-	background-repeat: repeat;
+	background: hsl(0, 0%, 90%);
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -16,7 +15,6 @@ body {
 	flex-direction: column;
 	font-family: sans-serif;
 	overflow-x: hidden;
-	color: white;
 }
 body > * {
 	z-index: 1;
@@ -32,7 +30,6 @@ main {
 .hero-content {
 	min-height: 31rem;
 	width: 100%;
-	color: rgb(255, 255, 255);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -43,40 +40,41 @@ main {
 .hero-content::before {
 	content: '';
 	position: absolute;
-	opacity: 0.3;
+	opacity: 0.4;
+	filter: invert(100%) brightness(60%);
 	top: 0;
 	left: 0;
 	min-height: 31em;
 	width: 100%;
 	background: url('../images/black\ hpsp.jpg');
 	background-size: cover;
+	z-index: 0;
 }
-.hero-content div {
-	width: 100%;
+.hero-section {
+	position: relative;
+	z-index: 1;
 }
 .web-dev {
-	filter: drop-shadow(1px 1px 7px rgba(0, 255, 242, 0.5));
 	font-size: 4.5rem;
 	margin: 0 2rem;
 	margin-bottom: 2rem;
+	z-index: 2;
 }
 .with-void {
-	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
 	font-size: 3.5rem;
 	margin: 0 2rem;
 	margin-bottom: 4rem;
 }
 .hero-content .author-name {
+	filter: drop-shadow(1px 1px 4px hsla(200, 100%, 50%, 0.3));
 	font-size: inherit;
 }
 .hero-text {
-	background-color: rgba(119, 119, 119, 0.7);
-	filter: brightness(200%);
-	color: black;
+	background-color: hsl(0, 0%, 60%);
 	padding: 0.7rem 1rem;
-	backdrop-filter: blur(4px);
 	border-radius: 1rem 3rem 0 2.5rem;
-	max-width: 40ch;
+	max-width: 35ch;
+	min-width: auto;
 	font-size: 1.8rem;
 	margin: 0 2rem;
 }
@@ -104,7 +102,7 @@ main {
 	shape-outside: circle(5rem at 6rem 5rem);
 }
 .author-name {
-	color: rgb(0, 209, 209);
+	color: hsl(200, 100%, 15%);
 	font-size: 2rem;
 }
 .author-text {
@@ -113,20 +111,25 @@ main {
 	max-width: 65ch;
 }
 .author-text a {
-	color: rgb(216, 216, 216);
+	color: hsl(200, 100%, 20%);
 }
 .author-text button {
-	border-radius: 0.2rem;
+	border-radius: 0.4rem;
 	cursor: pointer;
-	padding: 0.3rem 0.6rem;
+	padding: 0.4rem 0.6rem;
 	font-size: 0.9rem;
 	font-weight: 600;
-	color: white;
-	background-color: transparent;
+	border: 0.1rem solid black;
+	background: linear-gradient(
+		to right,
+		hsl(200, 100%, 75%),
+		hsl(200, 100%, 90%)
+	);
 	transition: filter 0.5s;
 }
 .author-text button:hover {
 	filter: brightness(50%);
+	color: white;
 }
 .blog {
 	position: relative;
@@ -142,7 +145,7 @@ main {
 	content: '';
 	width: 2rem;
 	height: 2rem;
-	border: 0.3rem solid rgba(255, 255, 255, 0.61);
+	border: 0.3rem solid hsl(200, 100%, 75%);
 	border-radius: 50%;
 	top: 10%;
 	left: 10%;
@@ -154,7 +157,7 @@ main {
 	content: '';
 	width: 2rem;
 	height: 2rem;
-	border: 0.3rem solid rgba(255, 255, 255, 0.61);
+	border: 0.3rem solid hsl(200, 100%, 75%);
 	border-radius: 50%;
 	top: 10%;
 	right: 10%;
@@ -163,10 +166,10 @@ main {
 
 .blog-header {
 	text-align: center;
-	font-size: 2rem;
-	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
-	margin: 0 1rem;
+	font-size: 2.5rem;
+	margin: 0 1.5rem;
 	margin-bottom: 1.5rem;
+	text-transform: capitalize;
 }
 .blogs-container {
 	display: flex;
@@ -174,20 +177,20 @@ main {
 	align-items: flex-start;
 	flex-wrap: wrap;
 }
-.blogs-container a {
-	text-decoration-color: white;
-}
+
 .blogs {
 	display: flex;
 	flex-direction: column;
+	cursor: pointer;
 	max-width: 18rem;
 	min-height: 15rem;
 	margin: 1rem;
 	margin-bottom: 2rem;
-	background-color: rgba(255, 255, 255, 0.08);
-	color: white;
+	background-color: hsl(200, 50%, 95%);
+	color: black;
 	border-radius: 0.4rem;
 	transition: transform 0.5s;
+	box-shadow: -0.3rem 0.3rem 8px hsl(0, 0%, 0%, 0.7);
 }
 .blogs:hover {
 	transform: scale(1.05);
@@ -201,9 +204,8 @@ main {
 	height: 8rem;
 }
 .blogs-header {
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	margin: auto 0.5rem;
-	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.4));
 }
 .blogs-text {
 	margin: auto 0.5rem;
@@ -229,8 +231,9 @@ main {
 	margin: 1rem;
 }
 .footer-items h3 {
-	filter: drop-shadow(1px 1px 4px rgba(0, 255, 242, 0.5));
+	filter: drop-shadow(1px 1px 4px hsla(200, 100%, 50%, 0.5));
 	border-bottom: 1px dashed white;
+	color: white;
 }
 .footer-items .social-icons {
 	text-decoration: none;
@@ -240,7 +243,7 @@ main {
 	align-items: center;
 	margin: 0.4rem 0;
 	text-align: center;
-	color: rgb(199, 199, 199);
+	color: hsl(0, 0%, 85%);
 }
 .footer-items a:hover {
 	filter: brightness(50%);
@@ -258,8 +261,9 @@ main {
 	color: rgb(2, 156, 2);
 }
 .contact-form h1 {
-	margin-left: 0.3rem;
+	margin-left: 0.6rem;
 	width: 100%;
+	color: white;
 }
 .contact-form input,
 textarea {
