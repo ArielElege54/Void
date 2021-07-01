@@ -1,0 +1,254 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: hsl(0, 0%, 90%);
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: sans-serif;
+	overflow-x: hidden;
+	color: white;
+}
+ul {
+	list-style-type: none;
+}
+main {
+	margin-top: 3rem;
+}
+
+.form-cont {
+	display: flex;
+	flex-direction: column;
+}
+.form-header {
+	text-align: center;
+	margin: 0.7rem;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+	font-size: 1.8rem;
+	color: hsl(200, 100%, 15%);
+}
+.forms {
+	background-color: hsl(200, 100%, 30%);
+	border-radius: 1.7rem;
+	backdrop-filter: blur(4px) brightness(70%);
+	min-height: 13rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 2rem;
+
+	margin: 0 1rem;
+}
+
+.login-input,
+.signup-input {
+	color: #fff;
+	align-self: center;
+	background: transparent;
+	border: none;
+	border-bottom: 3px double white;
+	padding: 0.8rem;
+	font-size: 0.8rem;
+	transition: border-bottom-color 1s;
+}
+.form-cont input::placeholder {
+	color: hsl(0, 0%, 90%);
+}
+.form-cont input:focus {
+	outline: none;
+	border-bottom-color: hsl(200, 100%, 65%);
+}
+.form-cont input:focus::placeholder {
+	opacity: 0.2;
+}
+.submit-button {
+	border-radius: 0.2rem;
+	padding: 0.7rem;
+	cursor: pointer;
+	background: hsl(200, 100%, 75%);
+	border: none;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: filter 0.5s;
+}
+.submit-button:hover {
+	filter: saturate(20%) brightness(110%);
+}
+.submit-button:focus {
+	filter: brightness(200%);
+}
+.submit-button:active {
+	background: hsl(200, 100%, 20%);
+	color: white;
+	filter: none;
+}
+.switch-button {
+	border-radius: 0.2rem;
+	padding: 0.7rem;
+	cursor: pointer;
+	background: hsl(200, 100%, 75%);
+	border: none;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: filter 0.5s;
+	margin: 2.5rem;
+	margin-bottom: 3.5rem;
+}
+.switch-button:hover {
+	filter: saturate(20%) brightness(110%);
+}
+.switch-button:active {
+	background: hsl(200, 100%, 20%);
+	color: #fff;
+	filter: none;
+}
+.bfooter {
+	width: 100%;
+	border-top: 1px solid grey;
+	padding-top: 1rem;
+	background-color: hsl(0, 0%, 5%);
+	color: hsl(0, 0%, 100%);
+}
+.footer-cont {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.footer-items {
+	display: flex;
+	max-width: 30%;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem;
+}
+.footer-items h3 {
+	border-bottom: 1px dashed hsl(200, 100%, 60%);
+	color: hsl(200, 100%, 60%);
+}
+.footer-items .social-icons {
+	text-decoration: none;
+}
+.footer-items a {
+	display: flex;
+	align-items: center;
+	margin: 0.4rem 0;
+	text-align: center;
+	color: hsl(0, 0%, 85%);
+}
+
+.footer-items a:hover {
+	filter: brightness(50%);
+}
+.fab {
+	margin-right: 0.5rem;
+}
+.fa-facebook {
+	color: rgb(18, 18, 219);
+}
+.fa-instagram {
+	color: red;
+}
+.fa-whatsapp {
+	color: rgb(2, 156, 2);
+}
+.contact-form h1 {
+	margin-left: 0.6rem;
+	width: 100%;
+}
+.contact-form input,
+textarea {
+	font-size: 0.8rem;
+	width: 11rem;
+	margin: 0.3rem;
+	padding-left: 0.4rem;
+}
+
+.contact-form input:focus,
+textarea:focus {
+	outline: none;
+	border-radius: 0.4rem;
+}
+
+#name,
+#email {
+	height: 1.7rem;
+}
+#subject {
+	height: 2rem;
+}
+#message {
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+	font-weight: bold;
+}
+
+.contactBtn {
+	padding: 0.5rem;
+	margin-left: 0.3rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+.contact-Btn:hover {
+	filter: opacity(0.6);
+}
+.copyright {
+	width: fit-content;
+	margin: auto auto 2rem;
+}
+@media screen and (max-width: 30em) {
+	main {
+		margin-top: 5rem;
+	}
+	.login-input,
+	.signup-input {
+		max-width: 8rem;
+	}
+	.footer-cont {
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer-items {
+		margin-bottom: 2rem;
+		width: 90%;
+	}
+	.contact-form h1 {
+		text-align: center;
+	}
+}
+
+.destroy {
+	display: none;
+}
+.rebuild {
+	animation: rotateYY 1s ease;
+	display: initial;
+}
+.hide {
+	opacity: 0;
+}
+.footer-show {
+	opacity: 1;
+	animation: rotateY 0.5s;
+}
+
+@keyframes rotateYY {
+	0% {
+		transform: rotateY(60deg);
+		opacity: 0;
+	}
+	100% {
+		transform: rotateY(0);
+		opacity: 1;
+	}
+}
