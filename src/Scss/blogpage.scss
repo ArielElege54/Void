@@ -48,6 +48,7 @@ main {
 	margin: 1rem;
 }
 .toc-table {
+	scroll-margin-top: 3rem;
 	background: linear-gradient(
 		to bottom,
 		hsl(200, 100%, 40%),
@@ -74,6 +75,7 @@ main {
 	text-align: center;
 	font-size: 2rem;
 	scroll-margin-top: 3rem;
+	margin-top: 2rem;
 }
 .blog-text-image {
 	width: 6rem;
@@ -88,8 +90,12 @@ main {
 .blog-text:last-of-type {
 	margin-bottom: 2rem;
 }
-
+.blog-text-cont a {
+	color: hsl(200, 100%, 65%);
+	margin-left: 1rem;
+}
 .bfooter {
+	margin-top: 3rem;
 	width: 100%;
 	border-top: 1px solid grey;
 	padding-top: 1rem;
