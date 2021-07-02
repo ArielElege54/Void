@@ -87,8 +87,13 @@ main {
   text-align: center;
 }
 
-.toc-data a {
-  color: #f4f4f4;
+.toc-data a,
+.toc-data a:visited {
+  color: whitesmoke;
+}
+
+.toc-data a:active {
+  color: #bfbfbf;
 }
 
 .blog-text-header {

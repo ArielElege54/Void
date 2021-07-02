@@ -63,8 +63,12 @@ main {
 	padding: 1rem;
 	text-align: center;
 }
-.toc-data a {
-	color: rgb(244, 244, 244);
+.toc-data a,
+.toc-data a:visited {
+	color: hsl(0, 0%, 96%);
+}
+.toc-data a:active {
+	color: hsl(0, 0%, 75%);
 }
 .blog-text-header {
 	text-align: center;

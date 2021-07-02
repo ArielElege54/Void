@@ -18,6 +18,30 @@ header {
           backdrop-filter: blur(4px);
 }
 
+a:visited {
+  color: #006699;
+}
+
+a:active {
+  color: #00aaff;
+}
+
+footer a:visited {
+  color: #d9d9d9;
+}
+
+footer a:active {
+  color: white;
+}
+
+nav a:visited {
+  color: white;
+}
+
+nav a:active {
+  color: #d9d9d9;
+}
+
 .site-logo img {
   width: 6rem;
   -webkit-filter: brightness(200%);
@@ -107,7 +131,8 @@ header .join {
     top: 1rem;
     right: 1rem;
     z-index: 1;
-    background-color: #4dc4ff;
+    background: -webkit-gradient(linear, left bottom, left top, from(#00aaff), to(#80d5ff));
+    background: linear-gradient(to top, #00aaff, #80d5ff);
     border-radius: 0.2rem;
     font-weight: bold;
     color: black;
@@ -145,10 +170,11 @@ header .join {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background: #0088cc;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
     padding-left: 1rem;
+    background: -webkit-gradient(linear, right top, left top, from(#006699), to(#1ab3ff));
+    background: linear-gradient(to left, #006699, #1ab3ff);
   }
   .bnav__list-items {
     margin: 0.5rem 2rem;
@@ -167,7 +193,7 @@ header .join {
             transform: translateX(0%);
   }
   .bnav-burger-open {
-    background-color: black;
+    background: black;
     color: white;
   }
   .bnav-links-open {

@@ -11,6 +11,24 @@ header {
 	z-index: 2;
 	backdrop-filter: blur(4px);
 }
+a:visited {
+	color: hsl(200, 100%, 30%);
+}
+a:active {
+	color: hsl(200, 100%, 50%);
+}
+footer a:visited {
+	color: hsl(0, 0%, 85%);
+}
+footer a:active {
+	color: hsl(0, 0%, 100%);
+}
+nav a:visited {
+	color: white;
+}
+nav a:active {
+	color: hsl(0, 0%, 85%);
+}
 
 .site-logo img {
 	width: 6rem;
@@ -79,7 +97,11 @@ header .join {
 		top: 1rem;
 		right: 1rem;
 		z-index: 1;
-		background-color: hsl(200, 100%, 65%);
+		background: linear-gradient(
+			to top,
+			hsl(200, 100%, 50%),
+			hsl(200, 100%, 75%)
+		);
 		border-radius: 0.2rem;
 		font-weight: bold;
 		color: black;
@@ -103,9 +125,13 @@ header .join {
 		align-items: flex-end;
 		justify-content: center;
 		flex-direction: column;
-		background: hsl(200, 100%, 40%);
 		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
 		padding-left: 1rem;
+		background: linear-gradient(
+			to left,
+			hsl(200, 100%, 30%),
+			hsl(200, 100%, 55%)
+		);
 	}
 	.bnav__list-items {
 		margin: 0.5rem 2rem;
@@ -123,7 +149,7 @@ header .join {
 		transform: translateX(0%);
 	}
 	.bnav-burger-open {
-		background-color: black;
+		background: black;
 		color: white;
 	}
 	.bnav-links-open {

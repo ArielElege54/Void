@@ -1,7 +1,9 @@
 let formContainer = document.querySelectorAll('.form-cont')
 let switchButton = document.querySelectorAll('.switch-button')
+let submitButton = document.querySelectorAll('.submit-button')
 
 window.addEventListener('load', () => formContainer[1].classList.add('destroy'))
+
 switchButton.forEach(button => {
    button.addEventListener('click', (e) => {
       e.preventDefault()

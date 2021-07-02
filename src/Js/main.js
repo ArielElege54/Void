@@ -31,7 +31,7 @@ let toggleNav = (event) => {
 			link.tabIndex = '0'
 			setTimeout(
 				() => link.classList.add('bnav-links-open'),
-				(navLinks.indexOf(link) + 1) * 300
+				(navLinks.indexOf(link) + 1) * 100
 				)
 			})
 		} else {
