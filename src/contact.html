@@ -9,7 +9,7 @@
 			content="Contact us through any of the following media preferably through whatsapp"
 		/>
 		<link rel="stylesheet" href="./Css/contact.css" />
-		<link rel="stylesheet" href="./Css/header.css" />
+		<!-- <link rel="stylesheet" href="./Css/header.css" /> -->
 		<title>Contact Us | Void Media</title>
 	</head>
 	<body>
@@ -55,7 +55,7 @@
 						class="contact-info"
 					>
 						<p class="contact-icon address-icon">
-							<i class="fas fa-home fa-2x"></i>
+							<i class="fas fa-home fa-2x aria-hidden="true""></i>
 						</p>
 						<h3 class="contact-info-title">Address</h3>
 						<h3 class="contact-info-value">
@@ -63,17 +63,17 @@
 						</h3>
 					</a>
 					<a href="https://www.facebook.com/ariel.elege.5" class="contact-info">
-						<p class="contact-icon"><i class="fa fa-facebook fa-2x"></i></p>
+						<p class="contact-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></p>
 						<h3 class="contact-info-title">Facebook</h3>
 						<h3 class="contact-info-value">Ariel Elege</h3>
 					</a>
 					<a href="mailto:elegeariel@gmail.com" class="contact-info">
-						<p class="contact-icon"><i class="fa fa-envelope fa-2x"></i></p>
+						<p class="contact-icon"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></p>
 						<h3 class="contact-info-title">Email</h3>
 						<h3 class="contact-info-value">elegeariel@gmail.com</h3>
 					</a>
 					<a href="tel:+2347069405854" class="contact-info">
-						<p class="contact-icon"><i class="fa fa-phone fa-2x"></i></p>
+						<p class="contact-icon"><i class="fa fa-phone fa-2x" aria-hidden="true"></i></p>
 						<h3 class="contact-info-title">Phone</h3>
 						<h3 class="contact-info-value">+2347069405854</h3>
 					</a>
@@ -81,10 +81,37 @@
 				<section class="contact-stuff contact-form">
 					<h2>Send Message</h2>
 					<form action="">
-						<input type="text" required placeholder="Name" id="name" />
-						<input type="email" required placeholder="Email" id="email" />
-						<input type="text" required placeholder="Subject" id="subject" />
-						<textarea placeholder="Message" required id="message"></textarea>
+						<input
+							type="text"
+							aria-required="true"
+							aria-label="name"
+							required
+							placeholder="Name"
+							id="name"
+						/>
+						<input
+							type="email"
+							aria-required="true"
+							aria-label="email"
+							required
+							placeholder="Email"
+							id="email"
+						/>
+						<input
+							type="text"
+							aria-required="true"
+							aria-label="subject"
+							required
+							placeholder="Subject"
+							id="subject"
+						/>
+						<textarea
+							placeholder="Message"
+							aria-required="true"
+							aria-label="message"
+							required
+							id="message"
+						></textarea>
 						<button disabled type="submit" class="contactBtn">Submit</button>
 					</form>
 				</section>
@@ -109,22 +136,24 @@
 				<section class="footer-items social">
 					<h3>SOCIALS</h3>
 					<a href="https://www.facebook.com/ariel.elege.5" class="social-icons">
-						<i class="fab fa-facebook fa-2x"></i> FACEBOOK
+						<i class="fab fa-facebook fa-2x" aria-hidden="true"></i> FACEBOOK
 					</a>
 					<a href="https://www.instagram.com/ariel_elege/" class="social-icons">
-						<i class="fab fa-instagram fa-2x"></i> INSTAGRAM
+						<i class="fab fa-instagram fa-2x" aria-hidden="true"></i> INSTAGRAM
 					</a>
 					<a href="https://wa.me/qr/YZKZ5JEK2BMDM1" class="social-icons">
-						<i class="fab fa-whatsapp fa-2x"></i> WHATSAPP
+						<i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i> WHATSAPP
 					</a>
 				</section>
 			</div>
 			<p class="copyright">copyright &copy; 2021</p>
 		</footer>
+		<span class="loader"></span>
+		<script src="./Js/main.js" defer></script>
 		<script
 			src="https://kit.fontawesome.com/93753111fa.js"
 			crossorigin="anonymous"
+			defer
 		></script>
-		<script src="./Js/main.js"></script>
 	</body>
 </html>

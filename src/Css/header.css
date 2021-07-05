@@ -1,7 +1,63 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #d9d9d9;
+  z-index: 3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.back {
+  z-index: -1;
+}
+
+.loader::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  height: 6rem;
+  width: 6rem;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 0.2em;
+  background: -webkit-gradient(linear, left bottom, right top, from(#00aaff), to(red));
+  background: linear-gradient(to top right, #00aaff, red);
+  -webkit-animation: colorshift 0.7s infinite;
+          animation: colorshift 0.7s infinite;
+}
+
+@-webkit-keyframes colorshift {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes colorshift {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
 header {
   height: 2.5em;
   width: 100%;
-  background: rgba(0, 68, 102, 0.9);
+  background: #004466;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,8 +70,6 @@ header {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   z-index: 2;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
 }
 
 a:visited {
@@ -154,8 +208,12 @@ header .join {
     right: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
   }
   .bnav__list {
+    margin: 0;
+    padding: 0;
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -187,8 +245,6 @@ header .join {
     display: inherit;
   }
   .bnav-open {
-    -webkit-animation: slidein 0.2s;
-            animation: slidein 0.2s;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
@@ -212,28 +268,6 @@ header .join {
   }
   .bnav-links {
     font-size: 1.2rem;
-  }
-}
-
-@-webkit-keyframes slidein {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes slidein {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
   }
 }
 
@@ -381,5 +415,9 @@ header .join {
             transform: rotateY(0);
     opacity: 1;
   }
+}
+
+ul {
+  list-style-type: none;
 }
 /*# sourceMappingURL=header.css.map */

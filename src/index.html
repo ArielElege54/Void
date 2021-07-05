@@ -9,7 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./Css/home.css" />
-		<link rel="stylesheet" href="./Css/header.css" />
+		<!-- <link rel="stylesheet" href="./Css/header.css" /> -->
 		<title>Nigeria Web Design And Development | Void Media</title>
 	</head>
 	<body>
@@ -46,12 +46,12 @@
 		<main class="bhome">
 			<section class="hero-content">
 				<h1 class="hero-section">
-					<p class="hero-stuff web-dev">WEB DEV</p>
-					<p class="hero-stuff with-void">
+					<p class="hero-stuff web-dev hide">WEB DEV</p>
+					<p class="hero-stuff with-void hide">
 						WITH <span class="author-name">VOID</span>
 					</p>
 				</h1>
-				<h2 class="hero-stuff hero-text hero-section">
+				<h2 class="hero-stuff hero-text hero-section hide">
 					A blog on web design and development and other personal experiences.
 				</h2>
 			</section>
@@ -170,23 +170,25 @@
 				<section class="footer-items social">
 					<h3>SOCIALS</h3>
 					<a href="https://www.facebook.com/ariel.elege.5" class="social-icons">
-						<i class="fab fa-facebook fa-2x"></i> FACEBOOK
+						<i class="fab fa-facebook fa-2x" aria-hidden="true"></i> FACEBOOK
 					</a>
 					<a href="https://www.instagram.com/ariel_elege/" class="social-icons">
-						<i class="fab fa-instagram fa-2x"></i> INSTAGRAM
+						<i class="fab fa-instagram fa-2x" aria-hidden="true"></i> INSTAGRAM
 					</a>
 					<a href="https://wa.me/qr/YZKZ5JEK2BMDM1" class="social-icons">
-						<i class="fab fa-whatsapp fa-2x"></i> WHATSAPP
+						<i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i> WHATSAPP
 					</a>
 				</section>
 			</div>
 			<p class="copyright">copyright &copy; 2021</p>
 		</footer>
+		<span class="loader" aria-hidden="true"></span>
+		<script src="./Js/main.js" defer></script>
+		<script src="./Js/index.js" defer></script>
 		<script
 			src="https://kit.fontawesome.com/93753111fa.js"
 			crossorigin="anonymous"
+			defer
 		></script>
-		<script src="./Js/main.js"></script>
-		<script src="./Js/index.js"></script>
 	</body>
 </html>

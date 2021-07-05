@@ -67,8 +67,10 @@ window.addEventListener("scroll", headerShortener);
 burger.addEventListener("click", toggleNav);
 mainTag.addEventListener("click", removeNav);
 footerTag.addEventListener("click", removeNav);
+
 window.addEventListener("load", () => {
 	footerTag.classList.add('hide')
+	document.querySelector(".loader").classList.add("hide", "back")
 	navLinks.forEach(link => {
 		if (link.getBoundingClientRect().left > docElem.scrollWidth) {
 			link.tabIndex = '-1'

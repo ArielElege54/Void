@@ -1,7 +1,47 @@
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: hsl(0, 0%, 85%);
+	z-index: 3;
+	transition: 0.3s;
+}
+.back {
+	z-index: -1;
+}
+.loader::after {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	height: 6rem;
+	width: 6rem;
+	transform: translate(-50%, -50%) rotate(45deg);
+	border-radius: 0.2em;
+	background: linear-gradient(
+		to top right,
+		hsl(200, 100%, 50%),
+		hsl(0, 100%, 50%)
+	);
+	animation: colorshift 0.7s infinite;
+}
+@keyframes colorshift {
+	0%,
+	100% {
+		filter: hue-rotate(0);
+	}
+	50% {
+		filter: hue-rotate(360deg);
+	}
+}
+// Header Section
+
 header {
 	height: 2.5em;
 	width: 100%;
-	background: hsla(200, 100%, 20%, 0.9);
+	background: hsl(200, 100%, 20%);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9,7 +49,6 @@ header {
 	align-items: center;
 	justify-content: space-around;
 	z-index: 2;
-	backdrop-filter: blur(4px);
 }
 a:visited {
 	color: hsl(200, 100%, 30%);
@@ -118,8 +157,11 @@ header .join {
 		top: 0;
 		right: 0;
 		transform: translateX(100%);
+		transition: 0.2s;
 	}
 	.bnav__list {
+		margin: 0;
+		padding: 0;
 		height: 100vh;
 		display: flex;
 		align-items: flex-end;
@@ -145,7 +187,6 @@ header .join {
 		display: inherit;
 	}
 	.bnav-open {
-		animation: slidein 0.2s;
 		transform: translateX(0%);
 	}
 	.bnav-burger-open {
@@ -168,14 +209,7 @@ header .join {
 		font-size: 1.2rem;
 	}
 }
-@keyframes slidein {
-	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
+
 @keyframes slideright {
 	0% {
 		transform: translateX(100%);
@@ -229,3 +263,9 @@ header .join {
 		opacity: 1;
 	}
 }
+
+ul {
+	list-style-type: none;
+}
+
+// Main Section

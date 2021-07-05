@@ -32,7 +32,6 @@ let blogAnimation = (event) => {
 window.addEventListener('load', () => {
      aboutSlideStuff.forEach(stuff => stuff.classList.add('hide'))
      blogSlideStuff.forEach(stuff => stuff.classList.add('hide'))
-     heroAnimatedStuff.forEach(stuff => stuff.classList.add('hide'))
      blogHeader.classList.add('hide')
 })
 
