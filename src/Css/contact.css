@@ -287,9 +287,9 @@ header .join {
   }
 }
 
-@media screen and (max-width: 18rem) {
+@media screen and (max-width: 22rem) {
   .bnav {
-    width: 70%;
+    width: 75%;
   }
   .bnav-links {
     font-size: 1.2rem;
@@ -326,32 +326,6 @@ header .join {
   }
 }
 
-@-webkit-keyframes rotateY {
-  0% {
-    -webkit-transform: rotateY(60deg);
-            transform: rotateY(60deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes rotateY {
-  0% {
-    -webkit-transform: rotateY(60deg);
-            transform: rotateY(60deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-    opacity: 1;
-  }
-}
-
 ul {
   list-style-type: none;
 }
@@ -366,6 +340,7 @@ main {
   margin: auto;
   text-align: center;
   padding: 0 2rem;
+  margin: 0;
   color: #00334d;
 }
 
@@ -669,9 +644,6 @@ textarea::placeholder {
   .contact-form h1 {
     text-align: center;
   }
-}
-
-@media screen and (max-width: 20em) {
   .contact-info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -685,6 +657,9 @@ textarea::placeholder {
             align-items: center;
     text-align: center;
   }
+  .contact-info h3 {
+    margin: 0;
+  }
 }
 
 .hide {
@@ -695,5 +670,31 @@ textarea::placeholder {
   opacity: 1;
   -webkit-animation: rotateY 0.5s;
           animation: rotateY 0.5s;
+}
+
+@-webkit-keyframes rotateY {
+  0% {
+    -webkit-transform: rotateY(60deg);
+            transform: rotateY(60deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateY {
+  0% {
+    -webkit-transform: rotateY(60deg);
+            transform: rotateY(60deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

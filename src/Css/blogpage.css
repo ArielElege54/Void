@@ -327,32 +327,6 @@ header .join {
   }
 }
 
-@-webkit-keyframes rotateY {
-  0% {
-    -webkit-transform: rotateY(60deg);
-            transform: rotateY(60deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes rotateY {
-  0% {
-    -webkit-transform: rotateY(60deg);
-            transform: rotateY(60deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-    opacity: 1;
-  }
-}
-
 ul {
   list-style-type: none;
 }
@@ -451,7 +425,7 @@ main a:hover {
 }
 
 .blog-text-cont a {
-  color: #4dc4ff;
+  color: #0088cc;
   margin-left: 1rem;
 }
 
@@ -581,5 +555,31 @@ main a:hover {
   opacity: 1;
   -webkit-animation: rotateY 0.5s;
           animation: rotateY 0.5s;
+}
+
+@-webkit-keyframes rotateY {
+  0% {
+    -webkit-transform: rotateY(60deg);
+            transform: rotateY(60deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateY {
+  0% {
+    -webkit-transform: rotateY(60deg);
+            transform: rotateY(60deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=blogpage.css.map */
