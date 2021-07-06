@@ -620,7 +620,7 @@ main {
   0% {
     -webkit-transform: rotateY(60deg);
             transform: rotateY(60deg);
-    opacity: 0;
+    opacity: 0.6;
   }
   100% {
     -webkit-transform: rotateY(0);
@@ -633,7 +633,7 @@ main {
   0% {
     -webkit-transform: rotateY(60deg);
             transform: rotateY(60deg);
-    opacity: 0;
+    opacity: 0.6;
   }
   100% {
     -webkit-transform: rotateY(0);
