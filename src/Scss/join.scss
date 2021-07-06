@@ -412,7 +412,7 @@ main {
 .destroy {
 	visibility: hidden;
 	position: absolute;
-	top: 0;
+	top: -20rem;
 }
 .rebuild {
 	animation: rotateY 1s ease;
