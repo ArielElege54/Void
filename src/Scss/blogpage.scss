@@ -83,7 +83,10 @@ nav a:visited {
 nav a:active {
 	color: hsl(0, 0%, 85%);
 }
-
+.site-header {
+	width: 20%;
+	text-align: center;
+}
 .site-logo img {
 	width: 6rem;
 	filter: brightness(200%);
@@ -383,6 +386,9 @@ main a:hover {
 	}
 }
 @media screen and (max-width: 30em) {
+	.site-header {
+		width: auto;
+	}
 	main {
 		margin-top: 5rem;
 	}

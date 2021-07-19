@@ -131,6 +131,11 @@ nav a:active {
   opacity: 0.8;
 }
 
+.site-header {
+  width: 20%;
+  text-align: center;
+}
+
 header .join {
   color: white;
 }
@@ -622,6 +627,9 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 30em) {
+  .site-header {
+    width: auto;
+  }
   .contact-header {
     margin-top: 2rem;
   }

@@ -121,6 +121,11 @@ nav a:active {
   color: #d9d9d9;
 }
 
+.site-header {
+  width: 20%;
+  text-align: center;
+}
+
 .site-logo img {
   width: 6rem;
   -webkit-filter: brightness(200%);
@@ -494,6 +499,9 @@ main {
 }
 
 @media screen and (max-width: 30em) {
+  .site-header {
+    width: auto;
+  }
   main {
     margin-top: 5rem;
   }
