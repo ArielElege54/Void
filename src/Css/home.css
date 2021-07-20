@@ -1,7 +1,12 @@
+:root {
+  --primary: hsl(200, 100%, 10%);
+  --bodybg: hsl(0, 0%, 90%);
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #e6e6e6;
+  background: var(--bodybg);
   padding: 0;
   margin: 0;
   width: 100%;
@@ -18,7 +23,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: sans-serif;
+  font-family: 'Helvetica' sans-serif;
   overflow-x: hidden;
 }
 
@@ -79,9 +84,9 @@ body {
 }
 
 header {
-  height: 2.5em;
+  height: 3em;
   width: 100%;
-  background: #004466;
+  background: var(--primary);
   position: fixed;
   top: 0;
   left: 0;
@@ -136,7 +141,7 @@ nav a:active {
 }
 
 header .join {
-  color: white;
+  color: #b3e6ff;
 }
 
 .bnav-burger {
@@ -199,9 +204,6 @@ header .join {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .site-header__text {
-    color: white;
-  }
   .hide-link {
     visibility: hidden;
   }
@@ -214,8 +216,8 @@ header .join {
     top: 1rem;
     right: 1rem;
     z-index: 1;
-    background: -webkit-gradient(linear, left bottom, left top, from(#00aaff), to(#80d5ff));
-    background: linear-gradient(to top, #00aaff, #80d5ff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#66ccff), to(#cceeff));
+    background: linear-gradient(to bottom, #66ccff, #cceeff);
     border-radius: 0.2rem;
     font-weight: bold;
     color: black;
@@ -237,8 +239,10 @@ header .join {
     right: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
   }
   .bnav__list {
     margin: 0;
@@ -260,8 +264,8 @@ header .join {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
     padding-left: 1rem;
-    background: -webkit-gradient(linear, right top, left top, from(#006699), to(#1ab3ff));
-    background: linear-gradient(to left, #006699, #1ab3ff);
+    background: -webkit-gradient(linear, right top, left top, color-stop(70%, #002233), to(rgba(0, 34, 51, 0.9)));
+    background: linear-gradient(to left, #002233 70%, rgba(0, 34, 51, 0.9));
   }
   .bnav__list-items {
     margin: 0.5rem 2rem;
@@ -339,7 +343,8 @@ main {
 }
 
 .hero-content {
-  min-height: 31rem;
+  height: 100vh;
+  min-height: 33rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,15 +367,36 @@ main {
   content: '';
   position: absolute;
   opacity: 0.4;
-  -webkit-filter: invert(100%) brightness(60%);
-          filter: invert(100%) brightness(60%);
+  -webkit-filter: invert(100%) brightness(80%);
+          filter: invert(100%) brightness(80%);
   top: 0;
   left: 0;
-  min-height: 31em;
+  height: 100vh;
+  min-height: 33em;
   width: 100%;
   background: url("../images/headphones-and-lights-in-darkness.jpg");
   background-size: cover;
   z-index: 0;
+  -webkit-clip-path: circle(40% at 50% 40%);
+          clip-path: circle(40% at 50% 40%);
+}
+
+.hero-content::after {
+  content: '';
+  position: absolute;
+  opacity: 0.4;
+  z-index: -1;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  top: 1rem;
+  left: 0;
+  height: 100vh;
+  min-height: 33em;
+  width: 100%;
+  background: grey;
+  background-size: cover;
+  -webkit-clip-path: circle(40% at 50% 40%);
+          clip-path: circle(40% at 50% 40%);
 }
 
 .hero-section {
@@ -397,7 +423,7 @@ main {
 }
 
 .hero-text {
-  background-color: #999999;
+  background-color: #b3b3b3;
   padding: 0.7rem 1rem;
   border-radius: 1rem 3rem 0 2.5rem;
   max-width: 35ch;
@@ -424,7 +450,7 @@ main {
 
 .author {
   width: 80%;
-  margin: 8rem 0 5rem 0;
+  margin: 8rem 0 8rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,14 +467,14 @@ main {
   height: 10rem;
   width: 10rem;
   border-radius: 50%;
-  -webkit-box-shadow: 0.25em 0.25em 0.7em 0.1em rgba(0, 0, 0, 0.9);
-          box-shadow: 0.25em 0.25em 0.7em 0.1em rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0.25em 0.25em 0.7em 0.1em rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25em 0.25em 0.7em 0.1em rgba(0, 0, 0, 0.5);
   margin-right: 2rem;
   shape-outside: circle(5rem at 6rem 5rem);
 }
 
 .author-name {
-  color: #00334d;
+  color: var(--primary);
   font-size: 2rem;
   margin: 0;
 }
@@ -468,14 +494,14 @@ main {
 }
 
 .author-text button {
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   cursor: pointer;
-  padding: 0.4rem 0.6rem;
+  padding: 0.6rem 0.7rem;
   font-size: 0.9rem;
-  font-weight: 600;
-  border: 0.1rem solid black;
-  background: -webkit-gradient(linear, left top, left bottom, from(#33bbff), to(#cceeff));
-  background: linear-gradient(to bottom, #33bbff, #cceeff);
+  font-weight: 500;
+  border: 0.1rem solid rgba(0, 68, 102, 0.5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#66ccff), to(#cceeff));
+  background: linear-gradient(to bottom, #66ccff, #cceeff);
   -webkit-transition: -webkit-filter 0.5s;
   transition: -webkit-filter 0.5s;
   transition: filter 0.5s;
@@ -531,7 +557,7 @@ main {
   margin: 0 1.5rem;
   margin-bottom: 2rem;
   text-transform: capitalize;
-  color: #00334d;
+  color: var(--primary);
 }
 
 .blogs-container {
@@ -557,19 +583,22 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   cursor: pointer;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   max-width: 18rem;
   min-height: 15rem;
   margin: 1rem;
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
   background-color: #ecf4f9;
-  color: black;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
+  overflow: hidden;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  -webkit-box-shadow: -0.3rem 0.3rem 8px rgba(0, 0, 0, 0.7);
-          box-shadow: -0.3rem 0.3rem 8px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -0.3rem 0.3rem 8px rgba(0, 0, 0, 0.5);
+          box-shadow: -0.3rem 0.3rem 8px rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 
@@ -584,7 +613,6 @@ main {
 }
 
 .blogs-img {
-  border-radius: 0.4rem 0.4rem 0 0;
   width: 100%;
   height: 8rem;
 }
@@ -592,18 +620,22 @@ main {
 .blogs-header {
   font-size: 1.5rem;
   margin: auto 0.5rem;
-  color: #00334d;
+  color: var(--primary);
+  text-transform: uppercase;
 }
 
 .blogs-text {
+  text-transform: capitalize;
+  text-decoration: underline;
   margin: auto 0.5rem;
+  color: #004466;
 }
 
 .bfooter {
   width: 100%;
   border-top: 1px solid grey;
   padding-top: 1rem;
-  background-color: #0d0d0d;
+  background-color: var(--primary);
   color: white;
 }
 
@@ -612,8 +644,9 @@ main {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -625,7 +658,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 30%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -656,6 +688,7 @@ main {
   margin: 0.4rem 0;
   text-align: center;
   color: #d9d9d9;
+  text-transform: capitalize;
 }
 
 .footer-items a:hover {
@@ -712,7 +745,7 @@ main {
     font-size: 1.4rem;
   }
   .author {
-    margin-top: 2rem;
+    margin-top: 0;
     margin-bottom: 4rem;
   }
   .author div {
