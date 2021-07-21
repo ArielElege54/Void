@@ -45,15 +45,12 @@ removeNav = () => {
 }
 
 window.addEventListener("load", () => {
-   // document.querySelector(".loader").classList.add("hide")
-	// navLinks.forEach(link => {
-	// 	if (link.getBoundingClientRect().left > docElem.scrollWidth) {
-	// 		link.tabIndex = '-1'
-	// 	}
-	// })
-	// Array.from(document.querySelectorAll('.hero-stuff')).forEach(stuff => {
-	// 		stuff.classList.add('hero-animate')
-	// })
+   document.querySelector(".loader").classList.add("hide")
+	navLinks.forEach(link => {
+		if (link.getBoundingClientRect().left > docElem.scrollWidth) {
+			link.tabIndex = '-1'
+		}
+	})
 });
 
 window.addEventListener("scroll", () => {
@@ -95,9 +92,3 @@ window.addEventListener("resize", () => {
 		}
 	})
 })
-
-contactInput.forEach(input => {
-	input.addEventListener('change', () => (e) => {
-	  input.value = e.target.value
-	})
- }) 

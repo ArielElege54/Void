@@ -4,12 +4,7 @@ let burger = document.querySelector(".bnav-burger")
 let nav = document.querySelector(".bnav")
 let navLinks = Array.from(document.querySelectorAll(".bnav-links"))
 
-let mainTag = document.querySelector("main")
-let footerTag = mainTag.nextElementSibling
-
 let docElem = document.documentElement
-
-let contactInput = Array.from(document.querySelectorAll('.contact-form input'))
 
 let headerShortener = () => {
 	if (docElem.scrollTop > 50) {
@@ -58,19 +53,22 @@ let removeNav = () => {
 }
 
 let footerShow = () => {
+	let footerTag = document.querySelector("footer")
 	if (footerTag.getBoundingClientRect().top < docElem.clientHeight / 1.5) {
 		footerTag.classList.add("footer-show");
  	}
 }
 
-window.addEventListener("scroll", headerShortener);
+window.addEventListener("scroll", () => { 
+	headerShortener()
+	footerShow()
+});
 burger.addEventListener("click", toggleNav);
-mainTag.addEventListener("click", removeNav);
-footerTag.addEventListener("click", removeNav);
+document.querySelector("main").addEventListener("click", removeNav);
+document.querySelector("footer").addEventListener("click", removeNav);
 
 window.addEventListener("load", () => {
-	footerTag.classList.add('hide')
-	document.querySelector(".loader").classList.add("hide", "back")
+	document.querySelector(".loader").classList.add("hide")
 	navLinks.forEach(link => {
 		if (link.getBoundingClientRect().left > docElem.scrollWidth) {
 			link.tabIndex = '-1'
@@ -88,10 +86,8 @@ window.addEventListener("resize", () => {
 
 	})
 })
-window.addEventListener("scroll", footerShow);
 
-contactInput.forEach(input => {
-	let inputIndex = contactInput.indexOf(input)
+Array.from(document.querySelectorAll('.contact-form input')).forEach(input => {
 	input.addEventListener('change', () => (e) => {
 	  input.value = e.target.value
 	})
