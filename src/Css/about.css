@@ -362,10 +362,7 @@ ul {
 .about-texts {
   font-size: 1.3em;
   max-width: 65ch;
-}
-
-.about-texts:nth-of-type(1) {
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
 }
 
 .about-texts a {
@@ -374,6 +371,10 @@ ul {
 
 .about-texts a:hover {
   opacity: 0.7;
+}
+
+.blog-link {
+  font-size: 1rem;
 }
 
 .ssImgCont {
