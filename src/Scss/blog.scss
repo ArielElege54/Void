@@ -13,7 +13,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	font-family: 'Helvetica' sans-serif;
+	font-family: Helvetica, sans-serif;
 
 	overflow-x: hidden;
 	color: white;
@@ -355,7 +355,7 @@ main {
 .bfooter {
 	width: 100%;
 	border-top: 1px solid grey;
-	padding: 3rem;
+	padding: 3rem 0;
 	padding-top: 7rem;
 	background-color: var(--primary);
 	color: hsl(0, 0%, 100%);
