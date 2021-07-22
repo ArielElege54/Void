@@ -243,8 +243,8 @@ header .join {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
     padding-left: 1rem;
-    background: -webkit-gradient(linear, right top, left top, color-stop(70%, #002233), to(rgba(0, 34, 51, 0.9)));
-    background: linear-gradient(to left, #002233 70%, rgba(0, 34, 51, 0.9));
+    background: -webkit-gradient(linear, right top, left top, from(#002233), to(rgba(0, 34, 51, 0.98)));
+    background: linear-gradient(to left, #002233, rgba(0, 34, 51, 0.98));
   }
   .bnav__list-items {
     margin: 0.5rem 2rem;
